@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soy José Flores, un apasionado UI Designer con más de 4 años de experiencia. Explora mi portafolio para descubrir proyectos innovadores y recursos útiles para developers y designers.">
+    <meta name="keywords" content="UI Design, UX Design, Recursos de Diseño, Tutoriales de UI, Sistemas de Diseño, Portafolio UI, Experiencia de Usuario, Diseño de Interfaz">
+    <meta name="author" content="José Flores Fernández">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Portafolio - José Flores">
+    <meta property="og:description" content="Soy José Flores, un apasionado UI Designer con más de 4 años de experiencia. Explora mi portafolio para descubrir proyectos innovadores y recursos útiles para developers y designers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josefloresdesign.com/">
+    <meta property="og:image" content="./assets/portada-home.jpg">
+    <title>Portafolio - José Flores</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/output.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .heading-gradient {
+            background: linear-gradient(180deg, #B99CFC 0%, #FFF 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .c-bg {
+            background-color: #0C0D0F;
+            background-image: url(./assets/bg-lines.png);
+            background-blend-mode: lighten;
+            background-position: center;
+            background-size: cover;
+        }
+        #projects {
+            scroll-margin-top: 108px;
+        }
+        .caption-project {
+            background: linear-gradient(180deg, rgba(12, 13, 15, 0) 0%, #0C0D0F 100%);
+        }
+        .bg-header {
+            background: rgba(12, 13, 15, 0.95);
+        }
+    </style>
+</head>
+<body class="bg-dark-50">
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-10 flex justify-center p-4 sm:px-8 lg:p-10">
+        <div class="w-full max-w-screen-2xl flex justify-between items-center">
+            <a href="index.html" class="lg:mr-8">
+                <img src="./assets/logo-s.svg" alt="logo de la página" class="sm:h-5">
+            </a>
+            <img src="./assets/menu-s.svg" alt="icono de menu" class="lg:hidden" onclick="myFunction()">
+            <nav id="myLinks" class="nav absolute w-full top-full left-0 pb-8 bg-header px-4 hidden lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-between ">
+                <ul class="flex flex-col lg:flex-row lg:gap-8">
+                    <li><a href="./about.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Acerca de mí</a></li>
+                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Recursos</a></li>
+                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Proyectos</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./contact.html" class="flex p-4 py-3 mb-2 rounded-lg sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:border-0 lg:mb-0">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="c-bg h-screen flex items-center justify-center px-4 sm:px-8 lg:px-10">
+        <article class="flex flex-col gap-6 sm:gap-12 lg:max-w-screen-lg">
+            <h1 data-aos="fade-up" data-aos-duration="1000" class="heading-gradient text-2xl text-center leading-9 sm:text-5xl sm:leading-tight 2xl:text-6xl 2xl:leading-tight">Diseño interfaces de alto impacto centradas en la usabilidad y accesibilidad</h1>
+            <div data-aos="fade-up" data-aos-duration="1000">
+               <p class="text-base text-surface-500 text-center sm:text-2xl">José Flores F.</p> 
+               <p class="text-base text-surface-500 text-center sm:text-2xl">UI Design Specialist</p> 
+            </div>
+            <div class="flex justify-center">
+                <a href="#projects">
+                    <img class="animate-bounce" src="./assets/chevron-down.svg" alt="icono de scroll de desplazamiento vertical">
+                </a>
+            </div>
+        </article>
+    </section>
+    <section id="projects" class="pt-8 px-4 mb-24 sm:px-8 xl:mb-40 2xl:mb-52">
+        <h2 class="text-2xl text-surface-300 text-center mb-8 sm:text-4xl xl:text-5xl xl:mb-16">Proyectos 💼</h2>
+        <div class="flex flex-col items-center gap-8 sm:gap-6 2xl:gap-16">
+            <div class="flex flex-col gap-8 sm:flex-row sm:justify-center sm:gap-6 2xl:gap-16 max-w-screen-2xl">
+                <a href="./project-on-energy.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
+                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl" >
+                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-on-energy.webp" alt="portada proyecto ON Energy">
+                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
+                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
+                            <p class="text-base text-surface-300 xl:text-2xl">ON Energy</p>
+                        </div>
+                    </article>
+                </a>
+                <a href="./project-tedx-lima.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000" >
+                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
+                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-tedxlima.webp" alt="portada proyecto TEDX Lima">
+                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
+                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
+                            <p class="text-base text-surface-300 xl:text-2xl">TEDx Lima</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="flex flex-col gap-8 sm:flex-row sm:justify-center sm:gap-6 2xl:gap-16 max-w-screen-2xl">
+                <a href="./project-apache.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
+                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
+                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-apache.webp" alt="portada proyecto Apache">
+                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
+                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
+                            <p class="text-base text-surface-300 xl:text-2xl">Apache</p>
+                        </div>
+                    </article>
+                </a>
+                <a href="./project-max-positivo.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
+                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
+                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-maxpositivo.webp" alt="portada proyecto Max positivo">
+                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
+                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
+                            <p class="text-base text-surface-300 xl:text-2xl">APP Max Positivo</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="flex flex-col gap-8 sm:flex-row sm:justify-center sm:gap-6 2xl:gap-16 max-w-screen-2xl">
+                <a href="./project-w3schools.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
+                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
+                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-w3schools.webp" alt="portada proyecto W3schools">
+                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
+                            <p class="text-base font-bold text-surface-50 xl:text-2xl">Rediseño - UI Design</p>
+                            <p class="text-base text-surface-300 xl:text-2xl">W3schools</p>
+                        </div>
+                    </article>
+                </a>
+                <a href="./project-sana.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
+                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
+                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-sana.webp" alt="portada proyecto Sana">
+                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
+                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UX/UI Design</p>
+                            <p class="text-base text-surface-300 xl:text-2xl">Sana</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+            <div class="flex flex-col gap-8 sm:flex-row sm:justify-center sm:gap-6 2xl:gap-16 max-w-screen-2xl">
+                <a href="./project-puzzle.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
+                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
+                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-puzzle.webp" alt="portada proyecto Puzzle">
+                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
+                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
+                            <p class="text-base text-surface-300 xl:text-2xl">Puzzle</p>
+                        </div>
+                    </article>
+                </a>
+                <a href="./project-ferias-cciap.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
+                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
+                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-ferias.webp" alt="portada proyecto Ferias CCIAP">
+                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
+                            <p class="text-base font-bold text-surface-50 xl:text-2xl">Brand + UI Design</p>
+                            <p class="text-base text-surface-300 xl:text-2xl">APP Ferias CCIAP</p>
+                        </div>
+                    </article>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="px-4 flex flex-col items-center gap-16 mb-24 sm:px-8 xl:mb-40 2xl:mb-52">
+        <header class="flex flex-col gap-4 max-w-2xl xl:gap-6">
+            <h2 class="text-2xl text-surface-300 text-center mb-0 sm:text-4xl xl:text-5xl">Recursos gratuitos 🎨</h2>
+            <p class="text-base text-surface-400 text-center sm:text-xl xl:text-2xl xl:leading-normal">En agradecimiento a la comunidad de UX/UI Designers y Developers, comparto recursos útiles para su día a día</p>
+            <p class="text-base text-surface-300 text-center sm:text-xl xl:text-2xl">“Nunca te Rindas”</p>
+        </header>
+        <article  class="flex flex-col items-center max-w-screen-2xl">
+            <diV class="flex flex-col gap-6 sm:max-w-lg xl:max-w-full xl:flex-row xl:items-center 2xl:gap-16">
+                <img loading="lazy" src="./assets/img-space-ds.webp" class="block rounded-lg border border-surface-900 xl:w-1/2" alt="portada space design system" data-aos="fade-up" data-aos-duration="1000">
+                <div class="flex flex-col gap-6 xl:w-1/2">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-lg text-surface-300 sm:text-2xl xl:text-3xl">Space Design System</h3>
+                        <p class="text-base text-surface-400 sm:text-2xl xl:text-2xl xl:leading-normal">Space es un DS creado para compartir recursos y construir comunidad entre developers y designers.</p>
+                    </div>
+                    <div class="flex gap-8">
+                        <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 170 +</span></p>
+                        <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 2.7k +</span></p>
+                    </div>
+                    <div class="flex gap-4">
+                        <a href="https://www.figma.com/community/file/1335673212969292007" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descagar recurso</a>
+                    </div>
+                </div>
+            </diV>
+        </article>
+    </section>
+    <section class="px-4 flex justify-center items-center mb-24 sm:gap-8 sm:px-8 xl:mb-40 2xl:mb-52">
+        <div class="flex flex-col items-center gap-6 max-w-2xl xl:gap-8">
+            <h2 class="text-2xl text-surface-300 text-center mb-0 sm:text-4xl xl:text-5xl">Contáctame ✉️</h2>
+            <p class="text-base text-surface-400 text-center sm:text-xl xl:text-2xl xl:leading-normal">¡Hola! Estoy aquí para ayudarte. Envíame un mensaje a josefigma@gmail.com</p>
+            <a href="mailto:josefigma@gmail.com?subject=Hola José&body=Quisiera comentarte sobre..." class="inline-flex justify-center w-full bg-primary-200 px-6 py-4 text-lg font-bold text-surface-50 text-center rounded hover:bg-primary-300 transition duration-300 sm:w-auto">¡Envíame un mensaje!</a>
+            <a href="https://wa.me/51985163950" target="_blank" class="text-surface-300 text-lg hover:text-surface-50">Contáctame por 💬 Whatsapp</a>
+        </div>
+    </section>
+    <footer class="flex flex-col items-center gap-8 px-4 py-10">
+        <img src="./assets/logo.svg" alt="">
+        <div class="flex justify-center gap-8">
+            <a href="https://www.youtube.com/@josefigma" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Youtube</a>
+            <a href="https://www.linkedin.com/in/josefigma/" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Linkedin</a>
+            <a href="https://www.behance.net/josefigma" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Behance</a>
+        </div>
+        <small class="text-sm text-surface-300 text-center">© 2024 All rights reserved</small>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/app.js"></script>
+</body>
+</html>

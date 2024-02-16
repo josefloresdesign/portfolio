@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="José Flores Fernández">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Recursos">
+    <meta property="og:description" content="Comparto recursos útiles para su día a día">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.josefloresdesign.com/resources">
+    <meta property="og:image" content="./assets/portada-resources.jpg">
+    <title>Recursos</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/output.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        #figma, #tutorials, #designs {
+            scroll-margin-top: 208px;
+        }
+        .bg-header {
+            background: rgba(12, 13, 15, 0.95);
+        }
+        .banner-top {
+            background-color: #101114;
+            height: 246px;
+            background-image: url(./assets/texture-2.webp);
+            background-blend-mode: multiply;
+            background-position: center;
+            background-size: cover;
+        }
+        .video-wrapper {
+            aspect-ratio: 16 / 9;
+        }
+
+        .video-wrapper iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body class="bg-dark-50">
+    <header id="main-header" class="fixed bg-dark-50 top-0 left-0 right-0 z-10 flex justify-center p-4 sm:px-8 lg:p-10">
+        <div class="w-full max-w-screen-2xl flex justify-between items-center">
+            <a href="index.html" class="lg:mr-8">
+                <img src="./assets/logo-s.svg" alt="logo de la página" class="sm:h-5">
+            </a>
+            <img src="./assets/menu-s.svg" alt="icono de menu" class="lg:hidden" onclick="myFunction()">
+            <nav id="myLinks" class="nav absolute w-full top-full left-0 pb-8 bg-header px-4 hidden lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-between">
+                <ul class="flex flex-col lg:flex-row lg:gap-8">
+                    <li><a href="./about.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Acerca de mí</a></li>
+                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-primary-100 hover:text-surface-50 lg:p-0 lg:mb-0">Recursos</a></li>
+                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Proyectos</a></li>
+                </ul>
+                <ul>
+                    <li><a href="./contact.html" class="flex p-4 py-3 mb-2 rounded-lg sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:border-0 lg:mb-0">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="figma" class="banner-top mt-14 p-6 flex justify-center items-start lg:mt-24">
+        <nav class="hidden lg:flex lg:w-full p-2 lg:bg-dark-100 lg:rounded-lg lg:max-w-3xl lg:fixed lg:z-10">
+            <a href="#figma" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Figma</a>
+            <a href="#tutorials" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Tutoriales</a>
+            <a href="#designs" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Diseños</a>
+        </nav>
+    </section>
+    <section  class="px-4 -mt-10 flex justify-center sm:px-8 sm:-mt-16 mb-8 lg:mb-16">
+        <div class="w-full max-w-4xl flex items-start p-4 border border-surface-900 bg-dark-50 rounded-lg gap-4 sm:p-6 sm:rounded-2xl lg:p-8">
+            <img class="block w-10 sm:w-16" src="./assets/color-palette.svg" alt="icono de recursos">
+            <div class="flex flex-col sm:gap-2">
+                <p class="text-base text-surface-300 font-bold sm:text-xl lg:text-2xl">Recursos para tus proyectos</p>
+                <p class="text-base text-surface-400 sm:text-xl lg:text-2xl">Para Developers y Designers</p>
+            </div>
+        </div>
+    </section>
+    <section class="px-4 flex flex-col items-center gap-8 lg:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
+        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-2xl">
+            <div class="lg:w-1/2">
+                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-elevation.webp" class="block rounded-lg border border-surface-900" alt="portada archivo de elevación">
+            </div>
+            <div class="flex flex-col gap-6 lg:w-1/2">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-lg text-surface-300 sm:text-2xl xl:text-3xl">Shadows and Elevation</h3>
+                    <p class="text-base text-surface-400 sm:text-2xl xl:text-2xl xl:leading-normal">Descubre como implementar un sistema de elevación dentro de tus proyectos.</p>
+                </div>
+                <div class="flex gap-8">
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 2 +</span></p>
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 71 +</span></p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.figma.com/community/file/1338985997188663059/system-of-shadows-and-elevation" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descagar recurso</a>
+                </div>
+            </div>
+        </article>
+        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-2xl">
+            <div class="lg:w-1/2 lg:order-1">
+                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-space-ds.webp" class="block rounded-lg border border-surface-900" alt="portada Space Design System">
+            </div>
+            <div class="flex flex-col gap-6 lg:w-1/2">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-lg text-surface-300 sm:text-2xl xl:text-3xl">Space Design System</h3>
+                    <p class="text-base text-surface-400 sm:text-2xl xl:text-2xl xl:leading-normal">Space es un DS creado para compartir recursos y construir comunidad entre developers y designers.</p>
+                </div>
+                <div class="flex gap-8">
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 170 +</span></p>
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 2.7k +</span></p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.figma.com/community/file/1335673212969292007/space-ds" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descagar recurso</a>
+                </div>
+            </div>
+        </article>
+        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-2xl">
+            <div class="lg:w-1/2">
+                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-colors.webp" class="block rounded-lg border border-surface-900" alt="portada paleta de colores">
+            </div>
+            <div class="flex flex-col gap-6 lg:w-1/2">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-lg text-surface-300 sm:text-2xl xl:text-3xl">Color Palette</h3>
+                    <p class="text-base text-surface-400 sm:text-2xl xl:text-2xl xl:leading-normal">Un sistema de colores que cuenta con una gran variedad de utilidades para tu DS.</p>
+                </div>
+                <div class="flex gap-8">
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 8 +</span></p>
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 165 +</span></p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.figma.com/community/file/1338986260032944916/color-palette-for-design-systems" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descagar recurso</a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <section id="tutorials" class="px-4 flex flex-col items-center gap-8 xl:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
+        <header class="flex flex-col gap-4 max-w-2xl xl:gap-6">
+            <h2 class="text-2xl text-surface-300 text-center mb-0 sm:text-4xl xl:text-5xl">Tutoriales prácticos</h2>
+            <p class="text-base text-surface-400 text-center sm:text-xl xl:text-2xl xl:leading-normal">Mejora tus habilidades de diseño UI</p>
+        </header>
+        <div class="w-full max-w-5xl rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+            <div class="video-wrapper">
+                <iframe loading="lazy" class="w-full h-full" src="https://www.youtube.com/embed/jGLDETmTm8w?si=t7Cc4wLuSfW3CLan" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <section id="designs" class="px-4 flex flex-col items-center gap-8 xl:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
+        <header class="flex flex-col gap-4 max-w-2xl xl:gap-6">
+            <h2 class="text-2xl text-surface-300 text-center mb-0 sm:text-4xl xl:text-5xl">Diseños para tu portafolio</h2>
+            <p class="text-base text-surface-400 text-center sm:text-xl xl:text-2xl xl:leading-normal">Pongo a tu disposición algunos diseños para que los utilices en tu portafolio y practiques desarrollo web.</p>
+        </header>
+        <div class="flex flex-col gap-8 sm:justify-center lg:flex-row">
+            <article class="flex flex-col gap-6 max-w-md">
+                <div>
+                    <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" class="rounded-lg block" src="./assets/img-proyecto-1.webp" alt="portada recurso Travel Chosica">
+                    <h3 class="mt-2 text-lg text-surface-300 sm:text-xl xl:text-2xl">Travel booking website</h3>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.figma.com/community/file/1339655923912123724/travel-booking-website" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descagar recurso</a>
+                </div>
+            </article>
+            <article class="flex flex-col gap-6 max-w-md">
+                <div>
+                    <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" class="rounded-lg block" src="./assets/img-proyecto-2.webp" alt="portada recurso Voz Animal">
+                    <h3 class="mt-2 text-lg text-surface-300 sm:text-xl xl:text-2xl">Pet Adoption Lading</h3>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.figma.com/community/file/1339656463731992910/pet-adoption-lading" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descagar recurso</a>
+                </div>
+            </article>
+            <article class="flex flex-col gap-6 max-w-md">
+                <div>
+                    <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" class="rounded-lg block" src="./assets/img-proyecto-3.webp" alt="portada recurso Web Ecommerce">
+                    <h3 class="mt-2 text-lg text-surface-300 sm:text-xl xl:text-2xl">Web Ecommerce</h3>
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.figma.com/community/file/1339656765677991248/web-ecommerce" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descagar recurso</a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+    <footer class="flex flex-col items-center gap-8 px-4 py-10">
+        <div class="rounded-lg overflow-hidden">
+            <img class="block rounded-lg" src="./assets/logo.svg" alt="">
+        </div>
+        <div class="flex justify-center gap-8">
+            <a href="https://www.youtube.com/@josefigma" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Youtube</a>
+            <a href="https://www.linkedin.com/in/josefigma/" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Linkedin</a>
+            <a href="https://www.behance.net/josefigma" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Behance</a>
+        </div>
+        <small class="text-sm text-surface-300 text-center">© 2024 All rights reserved</small>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="./js/toggle.js"></script>
+</body>
+</html>
