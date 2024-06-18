@@ -215,8 +215,38 @@
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        function initAOS() {
+            AOS.init();
+        }
+
+        function initAppJS() {
+            // Código de tu archivo app.js
+            // Ejemplo: console.log("app.js cargado");
+        }
+
+        function loadScripts() {
+            var aosScript = document.createElement('script');
+            aosScript.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+            aosScript.onload = initAOS;
+            document.body.appendChild(aosScript);
+
+            var appScript = document.createElement('script');
+            appScript.src = './js/app.js';
+            appScript.onload = initAppJS;
+            document.body.appendChild(appScript);
+        }
+
+        window.addEventListener('load', function() {
+            if (window.CookieConsent && window.CookieConsent.consentGiven) {
+                loadScripts();
+            } else {
+                window.addEventListener('CookieConsent', function() {
+                    if (window.CookieConsent.consentGiven) {
+                        loadScripts();
+                    }
+                });
+            }
+        });
     </script>
-    <script src="./js/app.js"></script>
 </body>
 </html>
