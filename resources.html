@@ -13,17 +13,27 @@
     <meta property="og:image" content="./assets/portada-resources.jpg">
     <title>Recursos</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/output.css">
+    <script src="https://kit.fontawesome.com/ed0744c023.js" crossorigin="anonymous"></script>
     <style>
         html {
             scroll-behavior: smooth;
         }
-        #figma, #tutorials, #designs {
-            scroll-margin-top: 208px;
+        body::-webkit-scrollbar {
+            width: 12px;               
         }
-        .bg-header {
-            background: rgba(12, 13, 15, 0.95);
+
+        body::-webkit-scrollbar-track {
+            background: #1A1A1A;       
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #7D49F8;    
+            border-radius: 20px;       
+            border: 3px solid #1A1A1A;  
+        }
+        #figma, #tutorials, #guide {
+            scroll-margin-top: 208px;
         }
         .banner-top {
             background-color: #101114;
@@ -45,29 +55,31 @@
     </style>
 </head>
 <body class="bg-dark-50">
-    <header id="main-header" class="fixed bg-dark-50 top-0 left-0 right-0 z-10 flex justify-center p-4 sm:px-8 lg:p-10">
+    <header id="main-header" class="bg-dark-50 fixed top-0 left-0 right-0 z-30 flex justify-center p-4 sm:px-8 lg:p-6">
         <div class="w-full max-w-screen-2xl flex justify-between items-center">
             <a href="index.html" class="lg:mr-8">
-                <img src="./assets/logo-s.svg" alt="logo de la página" class="sm:h-5">
+                <img src="./assets/logo-header-v2.svg" alt="logo de la página" class="sm:h-5">
             </a>
-            <img src="./assets/menu-s.svg" alt="icono de menu" class="lg:hidden" onclick="myFunction()">
-            <nav id="myLinks" class="nav absolute w-full top-full left-0 pb-8 bg-header px-4 hidden lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-between">
-                <ul class="flex flex-col lg:flex-row lg:gap-8">
-                    <li><a href="./about.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Acerca de mí</a></li>
-                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-primary-100 hover:text-surface-50 lg:p-0 lg:mb-0">Recursos</a></li>
-                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Proyectos</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./contact.html" class="flex p-4 py-3 mb-2 rounded-lg sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:border-0 lg:mb-0">Contacto</a></li>
+            <div onclick="openNav()" class="lg:hidden flex flex-col justify-center items-center rounded-md gap-1 p-2 w-11 h-11 bg-dark-100">
+                <img id="icon-menu" src="./assets/menu.svg" alt="">
+            </div>
+            <nav id="myLinks" class="bg-dark-50 nav absolute w-full top-full left-0 pb-8 bg-header px-4 hidden lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
+                <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-8">
+                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Proyectos</a></li>
+                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Recursos</a></li>
+                    <li><a href="./about.html" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Acerca de mí</a></li>
+                    <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0">
+                        <a href="./contact.html" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contáctame</a>
+                    </div>
                 </ul>
             </nav>
         </div>
     </header>
-    <section id="figma" class="banner-top mt-14 p-6 flex justify-center items-start lg:mt-24">
+    <section class="banner-top mt-14 p-6 flex justify-center items-start lg:mt-24">
         <nav class="hidden lg:flex lg:w-full p-2 lg:bg-dark-100 lg:rounded-lg lg:max-w-3xl lg:fixed lg:z-10">
-            <a href="#figma" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Figma</a>
             <a href="#tutorials" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Tutoriales</a>
-            <a href="#designs" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Diseños</a>
+            <a href="#figma" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Figma</a>
+            <a href="#guide" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Guias</a>
         </nav>
     </section>
     <section  class="px-4 -mt-10 flex justify-center sm:px-8 sm:-mt-16 mb-8 lg:mb-16">
@@ -78,62 +90,6 @@
                 <p class="text-base text-surface-400 sm:text-xl lg:text-2xl">Para Developers y Designers</p>
             </div>
         </div>
-    </section>
-    <section class="px-4 flex flex-col items-center gap-8 lg:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
-        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-2xl">
-            <div class="lg:w-1/2">
-                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-elevation.webp" class="block rounded-lg border border-surface-900" alt="portada archivo de elevación">
-            </div>
-            <div class="flex flex-col gap-6 lg:w-1/2">
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-lg text-surface-300 sm:text-2xl xl:text-3xl">Shadows and Elevation</h3>
-                    <p class="text-base text-surface-400 sm:text-2xl xl:text-2xl xl:leading-normal">Descubre como implementar un sistema de elevación dentro de tus proyectos.</p>
-                </div>
-                <div class="flex gap-8">
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 2 +</span></p>
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 71 +</span></p>
-                </div>
-                <div class="flex gap-4">
-                    <a href="https://www.figma.com/community/file/1338985997188663059/system-of-shadows-and-elevation" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descargar recurso</a>
-                </div>
-            </div>
-        </article>
-        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-2xl">
-            <div class="lg:w-1/2 lg:order-1">
-                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-space-ds.webp" class="block rounded-lg border border-surface-900" alt="portada Space Design System">
-            </div>
-            <div class="flex flex-col gap-6 lg:w-1/2">
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-lg text-surface-300 sm:text-2xl xl:text-3xl">Space Design System</h3>
-                    <p class="text-base text-surface-400 sm:text-2xl xl:text-2xl xl:leading-normal">Space es un DS creado para compartir recursos y construir comunidad entre developers y designers.</p>
-                </div>
-                <div class="flex gap-8">
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 170 +</span></p>
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 2.7k +</span></p>
-                </div>
-                <div class="flex gap-4">
-                    <a href="https://www.figma.com/community/file/1335673212969292007/space-ds" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descargar recurso</a>
-                </div>
-            </div>
-        </article>
-        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-2xl">
-            <div class="lg:w-1/2">
-                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-colors.webp" class="block rounded-lg border border-surface-900" alt="portada paleta de colores">
-            </div>
-            <div class="flex flex-col gap-6 lg:w-1/2">
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-lg text-surface-300 sm:text-2xl xl:text-3xl">Color Palette</h3>
-                    <p class="text-base text-surface-400 sm:text-2xl xl:text-2xl xl:leading-normal">Un sistema de colores que cuenta con una gran variedad de utilidades para tu DS.</p>
-                </div>
-                <div class="flex gap-8">
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 8 +</span></p>
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 165 +</span></p>
-                </div>
-                <div class="flex gap-4">
-                    <a href="https://www.figma.com/community/file/1338986260032944916/color-palette-for-design-systems" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descargar recurso</a>
-                </div>
-            </div>
-        </article>
     </section>
     <section id="tutorials" class="px-4 flex flex-col items-center gap-8 xl:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
         <header class="flex flex-col gap-4 max-w-2xl xl:gap-6">
@@ -146,57 +102,93 @@
             </div>
         </div>
     </section>
-    <section id="designs" class="px-4 flex flex-col items-center gap-8 xl:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
-        <header class="flex flex-col gap-4 max-w-2xl xl:gap-6">
-            <h2 class="text-2xl text-surface-300 text-center mb-0 sm:text-4xl xl:text-5xl">Diseños para tu portafolio</h2>
-            <p class="text-base text-surface-400 text-center sm:text-xl xl:text-2xl xl:leading-normal">Pongo a tu disposición algunos diseños para que los utilices en tu portafolio y practiques desarrollo web.</p>
-        </header>
-        <div class="flex flex-col gap-8 sm:justify-center lg:flex-row">
-            <article class="flex flex-col gap-6 max-w-md">
-                <div>
-                    <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" class="rounded-lg block" src="./assets/img-proyecto-1.webp" alt="portada recurso Travel Chosica">
-                    <h3 class="mt-2 text-lg text-surface-300 sm:text-xl xl:text-2xl">Travel booking website</h3>
+    <section id="figma" class="px-4 flex flex-col items-center gap-8 lg:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
+        
+        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-xl lg:px-8">
+            <div class="lg:w-1/2 lg:order-1">
+                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-space-ds.webp" class="block rounded-lg border border-surface-900" alt="portada Space Design System">
+            </div>
+            <div class="flex flex-col gap-6 lg:w-1/2">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-lg text-surface-100 sm:text-2xl xl:text-3xl">Space Design System</h3>
+                    <p class="text-base text-surface-300 sm:text-2xl xl:text-2xl xl:leading-normal">Space es un DS creado para compartir recursos y construir comunidad entre developers y designers.</p>
+                </div>
+                <div class="flex gap-8">
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 458 +</span></p>
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 9.1k +</span></p>
                 </div>
                 <div class="flex gap-4">
-                    <a href="https://www.figma.com/community/file/1339655923912123724/travel-booking-website" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descargar recurso</a>
+                    <a href="https://www.figma.com/community/file/1335673212969292007/space-ds" target="_blank" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">Descargar Recurso Gratis <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
                 </div>
-            </article>
-            <article class="flex flex-col gap-6 max-w-md">
-                <div>
-                    <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" class="rounded-lg block" src="./assets/img-proyecto-2.webp" alt="portada recurso Voz Animal">
-                    <h3 class="mt-2 text-lg text-surface-300 sm:text-xl xl:text-2xl">Pet Adoption Lading</h3>
+            </div>
+        </article>
+        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-xl lg:px-8">
+            <div class="lg:w-1/2">
+                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-colors.webp" class="block rounded-lg border border-surface-900" alt="portada paleta de colores">
+            </div>
+            <div class="flex flex-col gap-6 lg:w-1/2">
+                <div class="flex flex-col gap-3">
+                    <h3 class="text-lg text-surface-100 sm:text-2xl xl:text-3xl">Color Palette</h3>
+                    <p class="text-base text-surface-300 sm:text-2xl xl:text-2xl xl:leading-normal">Un sistema de colores que cuenta con una gran variedad de utilidades para tu DS.</p>
+                </div>
+                <div class="flex gap-8">
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 21 +</span></p>
+                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 322 +</span></p>
                 </div>
                 <div class="flex gap-4">
-                    <a href="https://www.figma.com/community/file/1339656463731992910/pet-adoption-lading" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descargar recurso</a>
+                    <a href="https://www.figma.com/community/file/1338986260032944916/color-palette-for-design-systems" target="_blank" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">Descargar Recurso Gratis <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
                 </div>
-            </article>
-            <article class="flex flex-col gap-6 max-w-md">
-                <div>
-                    <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" class="rounded-lg block" src="./assets/img-proyecto-3.webp" alt="portada recurso Web Ecommerce">
-                    <h3 class="mt-2 text-lg text-surface-300 sm:text-xl xl:text-2xl">Web Ecommerce</h3>
-                </div>
-                <div class="flex gap-4">
-                    <a href="https://www.figma.com/community/file/1339656765677991248/web-ecommerce" target="_blank" class="inline-flex justify-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-4 text-lg font-bold text-surface-50 rounded hover:bg-dark-300 transition duration-300 sm:w-auto">Descargar recurso</a>
-                </div>
-            </article>
-
-        </div>
+            </div>
+        </article>
     </section>
-    <footer class="flex flex-col items-center gap-8 px-4 py-10">
-        <div class="rounded-lg overflow-hidden">
-            <img class="block rounded-lg" src="./assets/logo.svg" alt="">
+    <section id="guide" class="px-4 flex flex-col items-center gap-8 lg:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
+        <article class="flex flex-col gap-6 lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-xl lg:px-8">
+            <div class="lg:w-1/2 lg:order-1">
+                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-guide.png" class="block rounded-lg border border-surface-900" alt="portada Space Design System">
+            </div>
+            <div class="flex flex-col gap-6 sm:gap-8 lg:w-1/2">
+                <div class="flex flex-col gap-3">
+                    <p class="text-sm text-surface-300 sm:text-lg">🚧 | Muy pronto</p>
+                    <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">¡Próximamente: Guías Gratuitas!</h3>
+                </div>
+                <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Estoy preparando guías gratuitas para ayudarte a mejorar tus habilidades en UX/UI Design y desarrollo. ¡Mantente atento para acceder a estos recursos y llevar tus proyectos al siguiente nivel!</p>
+            </div>
+        </article>
+
+    </section>
+
+    <footer class="flex flex-col gap-8 px-4 py-10 lg:items-center">
+        <div class="flex flex-col gap-8 lg:flex-row w-full lg:justify-between lg:px-8 lg:max-w-screen-xl">
+            <div class="flex flex-col gap-4 items-start">
+                <img src="./assets/new-logo-footer.svg" alt="imagen del logo de la página">
+                <div>
+                    <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Perú - Junín - Huancayo</p>
+                    <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Av. Universitaria Saños Chico</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-lg font-bold text-surface-300">Páginas</h4>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="./projects.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Proyectos</a></li>
+                        <li><a href="./resources.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Recursos</a></li>
+                        <li><a href="./about.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Acerca de mí</a></li>
+                        <li><a href="./contact.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contáctame</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-lg font-bold text-surface-300">Contacto</h4>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/josefloresdesign" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="flex justify-center gap-8">
-            <a href="https://www.youtube.com/@josefigma" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Youtube</a>
-            <a href="https://www.linkedin.com/in/josefigma/" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Linkedin</a>
-            <a href="https://www.behance.net/josefigma" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Behance</a>
-        </div>
-        <small class="text-sm text-surface-300 text-center">© 2024 All rights reserved</small>
+        <small class="text-base text-surface-300 text-center xl:mt-16">© 2024 Todos los derechos reservados</small>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="./js/toggle.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>

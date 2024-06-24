@@ -6,15 +6,26 @@
     <meta name="author" content="José Flores Fernández">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
-    <title>Proyecto ON Energy</title>
+    <title>Proyecto Ferias CCIAP</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./css/output.css">
+    <script src="https://kit.fontawesome.com/ed0744c023.js" crossorigin="anonymous"></script>
     <style>
         html {
             scroll-behavior: smooth;
         }
-        .bg-header {
-            background: rgba(12, 13, 15, 0.95);
+        body::-webkit-scrollbar {
+            width: 12px;               
+        }
+
+        body::-webkit-scrollbar-track {
+            background: #1A1A1A;       
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #7D49F8;    
+            border-radius: 20px;       
+            border: 3px solid #1A1A1A;  
         }
         .banner-top {
             background-color: #101114;
@@ -28,20 +39,22 @@
     </style>
 </head>
 <body class="bg-dark-50">
-    <header id="main-header" class="fixed bg-dark-50 top-0 left-0 right-0 z-10 flex justify-center p-4 sm:px-8 lg:p-10">
+    <header id="main-header" class="bg-dark-50 fixed top-0 left-0 right-0 z-30 flex justify-center p-4 sm:px-8 lg:p-6">
         <div class="w-full max-w-screen-2xl flex justify-between items-center">
             <a href="index.html" class="lg:mr-8">
-                <img src="./assets/logo-s.svg" alt="logo de la página" class="sm:h-5">
+                <img src="./assets/logo-header-v2.svg" alt="logo de la página" class="sm:h-5">
             </a>
-            <img src="./assets/menu-s.svg" alt="icono de menu" class="lg:hidden" onclick="myFunction()">
-            <nav id="myLinks" class="nav absolute w-full top-full left-0 pb-8 bg-header px-4 hidden lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-between ">
-                <ul class="flex flex-col lg:flex-row lg:gap-8">
-                    <li><a href="./about.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Acerca de mí</a></li>
-                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Recursos</a></li>
-                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Proyectos</a></li>
-                </ul>
-                <ul>
-                    <li><a href="./contact.html" class="flex p-4 py-3 mb-2 rounded-lg sm:py-4 text-base text-surface-300 hover:text-surface-50 lg:p-0 lg:border-0 lg:mb-0">Contacto</a></li>
+            <div onclick="openNav()" class="lg:hidden flex flex-col justify-center items-center rounded-md gap-1 p-2 w-11 h-11 bg-dark-100">
+                <img id="icon-menu" src="./assets/menu.svg" alt="">
+            </div>
+            <nav id="myLinks" class="bg-dark-50 nav absolute w-full top-full left-0 pb-8 bg-header px-4 hidden lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
+                <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-8">
+                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Proyectos</a></li>
+                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Recursos</a></li>
+                    <li><a href="./about.html" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Acerca de mí</a></li>
+                    <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0">
+                        <a href="./contact.html" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contáctame</a>
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -91,13 +104,6 @@
                 <img class="block rounded-lg xl:rounded-2xl" src="./assets/ferias/img-ferias-3.jpg" alt="imagen de pantallas de la aplicación">
                 <img class="block rounded-lg xl:rounded-2xl" src="./assets/ferias/img-ferias-4.jpg" alt="imagen de pantallas de la aplicación parte 2">
             </article>
-            <article class="flex flex-col gap-6 lg:gap-10">
-                <h3 class="text-xl text-center text-surface-300 sm:text-2xl">¡Gracias por tomarte el tiempo de explorar este proyecto!</h3>
-                <div class="flex flex-col justify-center items-center">
-                    <iframe src="https://giphy.com/embed/C54as4r5D7lFiKi45M" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-                    <p class="text-xs text-surface-700"><a  href="https://giphy.com/stickers/adobe-max-adobe-adobemax-C54as4r5D7lFiKi45M">via GIPHY</a></p>
-                </div>
-            </article>
             <article class="flex justify-between gap-2">
                 <div class="w-full">
                     <p class="text-base text-surface-500">Anterior</p>
@@ -110,15 +116,63 @@
             </article>
         </div>
     </section>
-    <footer class="flex flex-col items-center gap-8 px-4 py-10">
-        <img src="./assets/logo.svg" alt="">
-        <div class="flex justify-center gap-8">
-            <a href="https://www.youtube.com/@josefigma" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Youtube</a>
-            <a href="https://www.linkedin.com/in/josefigma/" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Linkedin</a>
-            <a href="https://www.behance.net/josefigma" target="_blank" class="text-surface-300 text-base hover:text-surface-50">Behance</a>
+    <section class="px-4 flex justify-center items-center mb-24 sm:gap-8 sm:px-8 xl:mb-40 2xl:mb-52">
+        <article class="flex flex-col gap-4 lg:flex-row lg:gap-16 lg:items-center lg:max-w-screen-lg lg:px-8">
+            <img src="./assets/img-chat-3d.png" alt="" class="w-40 lg:w-80">
+            <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-5">
+                    <h2 class="text-2xl text-surface-300 mb-0 sm:text-4xl sm:leading-normal xl:text-5xl xl:leading-normal">¿Listo para <strong class="text-primary-100">despegar</strong> con un nuevo proyecto? 🚀</h2>
+                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">josefigma@gmail.com</p>
+                </div>
+                <div class=" flex gap-6">
+                    <a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank">
+                        <i class="fa-brands fa-linkedin text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                    </a>
+                    <a href="https://www.instagram.com/josefloresdesign" target="_blank">
+                        <i class="fa-brands fa-instagram text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank">
+                        <i class="fa-brands fa-youtube text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                    </a>
+                    <a href="mailto:josefigma@gmail.com" target="_blank">
+                        <i class="fa-solid fa-envelope text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                    </a>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer class="flex flex-col gap-8 px-4 py-10 lg:items-center">
+        <div class="flex flex-col gap-8 lg:flex-row w-full lg:justify-between lg:px-8 lg:max-w-screen-xl">
+            <div class="flex flex-col gap-4 items-start">
+                <img src="./assets/new-logo-footer.svg" alt="imagen del logo de la página">
+                <div>
+                    <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Perú - Junín - Huancayo</p>
+                    <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Av. Universitaria Saños Chico</p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-lg font-bold text-surface-300">Páginas</h4>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="./projects.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Proyectos</a></li>
+                        <li><a href="./resources.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Recursos</a></li>
+                        <li><a href="./about.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Acerca de mí</a></li>
+                        <li><a href="./contact.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contáctame</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-lg font-bold text-surface-300">Contacto</h4>
+                    <ul class="flex flex-col gap-2">
+                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">LinkedIn</a></li>
+                        <li><a href="https://www.instagram.com/josefloresdesign" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <small class="text-sm text-surface-300 text-center">© 2024 All rights reserved</small>
+        <small class="text-base text-surface-300 text-center xl:mt-16">© 2024 Todos los derechos reservados</small>
     </footer>
-    <script src="./js/toggle.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
