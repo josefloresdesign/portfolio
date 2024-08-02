@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="./css/output.css">
     <script src="https://kit.fontawesome.com/ed0744c023.js" crossorigin="anonymous"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
+        body {
+            cursor: url("./assets/figma-cursor.png"), auto;
         }
         body::-webkit-scrollbar {
             width: 12px;               
@@ -32,14 +32,12 @@
             border-radius: 20px;       
             border: 3px solid #1A1A1A;  
         }
-        #figma, #tutorials, #guide {
-            scroll-margin-top: 208px;
+        .custom-line {
+            background: linear-gradient(180deg, #7D49F8 0%, rgba(73, 43, 146, 0.10) 100%);
         }
+
         .banner-top {
-            background-color: #101114;
-            height: 246px;
-            background-image: url(./assets/texture-2.webp);
-            background-blend-mode: multiply;
+            background-image: url(./assets/banner-resources.png);
             background-position: center;
             background-size: cover;
         }
@@ -51,135 +49,209 @@
             width: 100%;
             height: 100%;
         }
+        
 
     </style>
 </head>
 <body class="bg-dark-50">
     <header id="main-header" class="bg-dark-50 fixed top-0 left-0 right-0 z-30 flex justify-center p-4 sm:px-8 lg:p-6">
-        <div class="w-full max-w-screen-2xl flex justify-between items-center">
+        <div class="w-full max-w-screen-2xl flex justify-between items-center 2xl:px-8">
             <a href="index.html" class="lg:mr-8">
                 <img src="./assets/logo-header-v2.svg" alt="logo de la página" class="sm:h-5">
             </a>
             <div onclick="openNav()" class="lg:hidden flex flex-col justify-center items-center rounded-md gap-1 p-2 w-11 h-11 bg-dark-100">
                 <img id="icon-menu" src="./assets/menu.svg" alt="">
             </div>
-            <nav id="myLinks" class="bg-dark-50 nav absolute w-full top-full left-0 pb-8 bg-header px-4 hidden lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
-                <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-8">
-                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Proyectos</a></li>
-                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Recursos</a></li>
-                    <li><a href="./about.html" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Acerca de mí</a></li>
-                    <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0">
-                        <a href="./contact.html" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contáctame</a>
+            <nav id="myLinks" class="bg-opacity-modal nav absolute w-5/6 top-full right-0 pb-8 bg-header px-4 h-svh hidden lg:h-auto lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
+                <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
+                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Proyectos</a></li>
+                    <li class="hidden relative group">
+                        <a class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">
+                            Services
+                            <img src="./assets/dropdown.svg" alt="" class="pl-2"/>
+                        </a>
+                        <ul class="absolute top-full left-0 right-0 p-1 rounded-lg bg-dark-100 w-60 hidden lg:group-hover:block">
+                            <li><a href="./landing-page.html" class="flex px-4 py-3 sm:py-4 text-base text-surface-300 hover:text-surface-50 hover:bg-opacity-primary rounded">
+                                <img src="./assets/icon-browsers.svg" alt="" class="mr-2"> 
+                                Landing Page</a>
+                            </li>
+                            <li><a href="./landing-page.html" class="flex px-4 py-3 sm:py-4 text-base text-surface-300 hover:text-surface-50 hover:bg-opacity-primary rounded">
+                                <img src="./assets/icon-desktop.svg" alt="" class="mr-2"> 
+                                Website Redesign</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 💻 Landing Page</a></li>
+                    <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 🎨 Website Redesign</a></li>
+                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recursos</a></li>
+                    <li><a href="./about.html" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Acerca de mí</a></li>
+                    <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0 lg:pl-6">
+                        <a href="./contact.html" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contacto</a>
                     </div>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="banner-top mt-14 p-6 flex justify-center items-start lg:mt-24">
-        <nav class="hidden lg:flex lg:w-full p-2 lg:bg-dark-100 lg:rounded-lg lg:max-w-3xl lg:fixed lg:z-10">
-            <a href="#tutorials" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Tutoriales</a>
-            <a href="#figma" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Figma</a>
-            <a href="#guide" class="w-full text-base p-2 text-center text-surface-300 hover:bg-opacity-primary rounded transition duration-300">Guias</a>
-        </nav>
+    <section class="banner-top mt-14 p-6 max-w-screen-2xl m-auto h-52 mb-8 md:h-72 md:mb-16 2xl:mb-24 flex justify-center items-center lg:mt-24">
+        <h1 class="text-2xl text-center sm:leading-normal text-surface-100 sm:text-4xl lg:text-5xl lg:leading-normal 2xl:text-6xl 2xl:leading-normal">
+            Recursos para UX/UI <br> 
+            Designers y Developers</h1>
     </section>
-    <section  class="px-4 -mt-10 flex justify-center sm:px-8 sm:-mt-16 mb-8 lg:mb-16">
-        <div class="w-full max-w-4xl flex items-start p-4 border border-surface-900 bg-dark-50 rounded-lg gap-4 sm:p-6 sm:rounded-2xl lg:p-8">
-            <img class="block w-10 sm:w-16" src="./assets/color-palette.svg" alt="icono de recursos">
-            <div class="flex flex-col sm:gap-2">
-                <p class="text-base text-surface-300 font-bold sm:text-xl lg:text-2xl">Recursos para tus proyectos</p>
-                <p class="text-base text-surface-400 sm:text-xl lg:text-2xl">Para Developers y Designers</p>
-            </div>
-        </div>
-    </section>
-    <section id="tutorials" class="px-4 flex flex-col items-center gap-8 xl:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
-        <header class="flex flex-col gap-4 max-w-2xl xl:gap-6">
-            <h2 class="text-2xl text-surface-300 text-center mb-0 sm:text-4xl xl:text-5xl">Tutoriales prácticos</h2>
-            <p class="text-base text-surface-400 text-center sm:text-xl xl:text-2xl xl:leading-normal">Mejora tus habilidades de diseño UI</p>
-        </header>
-        <div class="w-full max-w-5xl rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
-            <div class="video-wrapper">
-                <iframe loading="lazy" class="w-full h-full" src="https://www.youtube.com/embed/jGLDETmTm8w?si=t7Cc4wLuSfW3CLan" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-    <section id="figma" class="px-4 flex flex-col items-center gap-8 lg:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
-        
-        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-xl lg:px-8">
-            <div class="lg:w-1/2 lg:order-1">
-                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-space-ds.webp" class="block rounded-lg border border-surface-900" alt="portada Space Design System">
-            </div>
-            <div class="flex flex-col gap-6 lg:w-1/2">
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-lg text-surface-100 sm:text-2xl xl:text-3xl">Space Design System</h3>
-                    <p class="text-base text-surface-300 sm:text-2xl xl:text-2xl xl:leading-normal">Space es un DS creado para compartir recursos y construir comunidad entre developers y designers.</p>
+    
+    <div class="flex xl:items-start gap-10 2xl:gap-16 px-4 sm:px-8 max-w-screen-2xl mx-auto">
+        <aside class="hidden xl:block w-72 shrink-0 sticky top-0 left-0 pt-36 -mt-36">
+            <ul class="flex flex-col gap-8">
+                <li><a href="#figma" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-document.svg" alt="" class="w-6 h-6 mr-4">Figma</a></li>
+                <li><a href="#tutorials" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-videocam.svg" alt="" class="w-6 h-6 mr-4">Tutoriales</a></li>
+                <li><a href="#templates" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-color-palette.svg" alt="" class="w-6 h-6 mr-4">Templates</a></li>
+                <li><a href="#guides" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-map.svg" alt="" class="w-6 h-6 mr-4">Guías</a></li>
+            </ul>
+        </aside>
+        <div class="flex flex-col gap-16 lg:gap-24 mb-16 lg:mb-24 xl:mb-40">
+            <section id="figma" class="flex flex-col gap-6 sm:gap-8">
+                <h2 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Descargables para tus proyectos</h2>
+                <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    <article class="flex flex-col gap-6">
+                        <img src="./assets/img-color-palette.png" alt="" class="rounded-lg border border-surface-800">
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Sistema de Colores</h3>
+                            <p class="text-surface-300 text-base sm:text-lg">Un sistema de colores con name-conventions y foco en la accesibilidad.</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                                <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 22 +</p>
+                                <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 372 +</p>
+                            </div>
+                            <a href="https://www.figma.com/community/file/1338986260032944916/color-palette-for-design-systems" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                                <img src="./assets/icon-download.svg" alt="">
+                            </a>
+                        </div>
+                    </article>
+                    <article class="flex flex-col gap-6">
+                        <img src="./assets/img-shadow.png" alt="" class="rounded-lg border border-surface-800">
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Sombras y Elevación</h3>
+                            <p class="text-surface-300 text-base sm:text-lg">Descubre cómo implementar un sistema de elevación en tus proyectos.</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                                <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 4 +</p>
+                                <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 110 +</p>
+                            </div>
+                            <a href="https://www.figma.com/community/file/1338985997188663059/system-of-shadows-and-elevation" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                                <img src="./assets/icon-download.svg" alt="">
+                            </a>
+                        </div>
+                    </article>
+                    <article class="flex flex-col gap-6">
+                        <img src="./assets/img-space-ds.png" alt="" class="rounded-lg border border-surface-800">
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Space Design System</h3>
+                            <p class="text-surface-300 text-base sm:text-lg">Design System gratuito con todos los componentes que necesitas en tu día a día.</p>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                                <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 468 +</p>
+                                <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 9.2 k +</p>
+                            </div>
+                            <a href="https://www.figma.com/community/file/1335673212969292007/space-ds" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                                <img src="./assets/icon-download.svg" alt="">
+                            </a>
+                        </div>
+                    </article>
                 </div>
-                <div class="flex gap-8">
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 458 +</span></p>
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 9.1k +</span></p>
+            </section>
+            <section id="tutorials" class="flex flex-col gap-6 sm:gap-8">
+                <h2 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Tutoriales</h2>
+                <div class="w-full rounded-lg overflow-hidden" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="video-wrapper">
+                        <iframe loading="lazy" class="w-full h-full" src="https://www.youtube.com/embed/vz4Ua2EHhUY?si=k08WRcZnyyp90MZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="flex gap-4">
-                    <a href="https://www.figma.com/community/file/1335673212969292007/space-ds" target="_blank" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">Descargar Recurso Gratis <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
+            </section>
+            <section id="templates" class="flex flex-col gap-6 sm:gap-8">
+                <h2 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Templates</h2>
+                <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    <article class="flex flex-col gap-6">
+                        <img src="./assets/img-template-1.jpg" alt="" class="rounded-lg border border-surface-800">
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Reservas de viajes</h3>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                                <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Inversión: $ 0</p>
+                            </div>
+                            <a href="https://josefdesign.gumroad.com/l/template-travel-booking" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                                <img src="./assets/icon-download.svg" alt="">
+                            </a>
+                        </div>
+                    </article>
+                    <article class="flex flex-col gap-6">
+                        <img src="./assets/img-template-2.jpg" alt="" class="rounded-lg border border-surface-800">
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Landing Adopción de Mascotas</h3>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                                <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Inversión: $ 0</p>
+                            </div>
+                            <a href="https://josefdesign.gumroad.com/l/template-landing-adoption" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                                <img src="./assets/icon-download.svg" alt="">
+                            </a>
+                        </div>
+                    </article>
+                    <article class="flex flex-col gap-6">
+                        <img src="./assets/img-template-3.jpg" alt="" class="rounded-lg border border-surface-800">
+                        <div class="flex flex-col gap-3">
+                            <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Web Ecommerce</h3>
+                        </div>
+                        <div class="flex justify-between">
+                            <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                                <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Inversión: $ 0</p>
+                            </div>
+                            <a href="https://josefdesign.gumroad.com/l/template-ecommerce" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                                <img src="./assets/icon-download.svg" alt="">
+                            </a>
+                        </div>
+                    </article>
                 </div>
-            </div>
-        </article>
-        <article class="flex flex-col gap-6 sm:max-w-lg lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-xl lg:px-8">
-            <div class="lg:w-1/2">
-                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-colors.webp" class="block rounded-lg border border-surface-900" alt="portada paleta de colores">
-            </div>
-            <div class="flex flex-col gap-6 lg:w-1/2">
-                <div class="flex flex-col gap-3">
-                    <h3 class="text-lg text-surface-100 sm:text-2xl xl:text-3xl">Color Palette</h3>
-                    <p class="text-base text-surface-300 sm:text-2xl xl:text-2xl xl:leading-normal">Un sistema de colores que cuenta con una gran variedad de utilidades para tu DS.</p>
-                </div>
-                <div class="flex gap-8">
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Favoritos:<span class="font-normal"> 21 +</span></p>
-                    <p class="text-base text-surface-300 font-bold sm:text-xl xl:text-2xl">Descargas:<span class="font-normal"> 322 +</span></p>
-                </div>
-                <div class="flex gap-4">
-                    <a href="https://www.figma.com/community/file/1338986260032944916/color-palette-for-design-systems" target="_blank" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">Descargar Recurso Gratis <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
-                </div>
-            </div>
-        </article>
-    </section>
-    <section id="guide" class="px-4 flex flex-col items-center gap-8 lg:gap-16 sm:px-8 lg:px-10 mb-24 xl:mb-40 2xl:mb-52">
-        <article class="flex flex-col gap-6 lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-xl lg:px-8">
-            <div class="lg:w-1/2 lg:order-1">
-                <img data-aos="fade-up" data-aos-duration="1000" loading="lazy" src="./assets/img-guide.png" class="block rounded-lg border border-surface-900" alt="portada Space Design System">
-            </div>
-            <div class="flex flex-col gap-6 sm:gap-8 lg:w-1/2">
-                <div class="flex flex-col gap-3">
-                    <p class="text-sm text-surface-300 sm:text-lg">🚧 | Muy pronto</p>
-                    <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">¡Próximamente: Guías Gratuitas!</h3>
-                </div>
-                <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Estoy preparando guías gratuitas para ayudarte a mejorar tus habilidades en UX/UI Design y desarrollo. ¡Mantente atento para acceder a estos recursos y llevar tus proyectos al siguiente nivel!</p>
-            </div>
-        </article>
+            </section>
+            <section id="guides" class="flex flex-col gap-6 sm:gap-8">
+                <h2 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Guías para tus proyectos</h2>
+                <article class="grid gap-8 lg:grid-cols-2 items-center">
+                    <img src="./assets/img-guide.png" alt="" class="rounded-lg">
+                    <div class="flex flex-col gap-6">
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">🚧 | Próximamente</h3>
+                        <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Estoy preparando guías gratuitas para ayudarte a mejorar tus habilidades en Diseño y Desarrollo UX/UI. ¡Mantente atento para acceder a estos recursos y llevar tus proyectos al siguiente nivel!</p>
+                    </div>
+                </article>
+            </section>
 
-    </section>
-
-    <footer class="flex flex-col gap-8 px-4 py-10 lg:items-center">
-        <div class="flex flex-col gap-8 lg:flex-row w-full lg:justify-between lg:px-8 lg:max-w-screen-xl">
+        </div>
+    </div>
+    <footer class="flex flex-col py-12 lg:items-center">
+        <div class="flex flex-col px-4  gap-8 lg:flex-row w-full lg:justify-between lg:px-8 lg:max-w-screen-2xl">
             <div class="flex flex-col gap-4 items-start">
                 <img src="./assets/new-logo-footer.svg" alt="imagen del logo de la página">
                 <div>
-                    <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Perú - Junín - Huancayo</p>
+                    <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Huancayo -  Perú</p>
                     <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Av. Universitaria Saños Chico</p>
                 </div>
             </div>
             <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-lg font-bold text-surface-300">Páginas</h4>
+                    <h4 class="text-lg font-bold text-surface-300">Paginas</h4>
                     <ul class="flex flex-col gap-2">
                         <li><a href="./projects.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Proyectos</a></li>
                         <li><a href="./resources.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Recursos</a></li>
                         <li><a href="./about.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Acerca de mí</a></li>
-                        <li><a href="./contact.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contáctame</a></li>
+                        <li><a href="./contact.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="flex flex-col gap-4">
                     <h4 class="text-lg font-bold text-surface-300">Contacto</h4>
                     <ul class="flex flex-col gap-2">
-                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Email</a></li>
+                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
                         <li><a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/josefloresdesign" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Instagram</a></li>
                         <li><a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">YouTube</a></li>
@@ -187,8 +259,27 @@
                 </div>
             </div>
         </div>
-        <small class="text-base text-surface-300 text-center xl:mt-16">© 2024 Todos los derechos reservados</small>
+        <small class="text-base text-surface-300 text-center mt-12">© 2024 Todos los derechos reservados</small>
     </footer>
     <script src="./js/app.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 50; // Ajusta este valor según sea necesario
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = target.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+    
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

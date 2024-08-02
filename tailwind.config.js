@@ -31,7 +31,7 @@ module.exports = {
       'success-300': '#0E674B',
       'success-400': '#0A4834',
       'opacity-primary': 'rgba(125, 73, 248, 0.15)',
-      'opacity-modal': 'rgba(18, 18, 18, 0.92)',
+      'opacity-modal': 'rgba(11, 11, 14, 0.98)',
       'dark-50': '#0B0B0E',
       'dark-100': '#161616',
       'dark-200': '#1A1A1A',

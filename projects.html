@@ -14,9 +14,11 @@
     <title>Proyectos</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./css/output.css">
+    <script src="https://kit.fontawesome.com/ed0744c023.js" crossorigin="anonymous"></script>
     <style>
-        html {
-            scroll-behavior: smooth;
+        
+        body {
+            cursor: url("./assets/figma-cursor.png"), auto;
         }
         body::-webkit-scrollbar {
             width: 12px;               
@@ -31,162 +33,231 @@
             border-radius: 20px;       
             border: 3px solid #1A1A1A;  
         }
-        #figma, #tutorials, #designs {
-            scroll-margin-top: 208px;
-        }
+        
         .banner-top {
-            background-color: #101114;
-            height: 246px;
-            background-image: url(./assets/texture-2.webp);
-            background-blend-mode: multiply;
+            background-image: url(./assets/banner-projects.png);
             background-position: center;
             background-size: cover;
         }
-        .caption-project {
-            background: linear-gradient(180deg, rgba(12, 13, 15, 0) 0%, #0C0D0F 100%);
+        @keyframes tool-animation {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .row-tools {
+            animation: tool-animation 70s linear infinite
+        }
+
+        .wrap-tools::before,
+        .wrap-tools::after {
+                content: "";
+                position: absolute;
+                z-index: 20;
+                width: 200px;
+                height: 100%;
+        }
+        .wrap-tools::before {
+            left: 0px;
+            background: linear-gradient(270deg, rgba(11, 11, 14, 0.00) 0%, #0B0B0E 100%);
+        }
+        .wrap-tools::after {
+            right: 0px;
+            background: linear-gradient(-270deg, rgba(11, 11, 14, 0.00) 0%, #0B0B0E 100%);
         }
 
     </style>
 </head>
 <body class="bg-dark-50">
     <header id="main-header" class="bg-dark-50 fixed top-0 left-0 right-0 z-30 flex justify-center p-4 sm:px-8 lg:p-6">
-        <div class="w-full max-w-screen-2xl flex justify-between items-center">
+        <div class="w-full max-w-screen-2xl flex justify-between items-center 2xl:px-8">
             <a href="index.html" class="lg:mr-8">
                 <img src="./assets/logo-header-v2.svg" alt="logo de la página" class="sm:h-5">
             </a>
             <div onclick="openNav()" class="lg:hidden flex flex-col justify-center items-center rounded-md gap-1 p-2 w-11 h-11 bg-dark-100">
                 <img id="icon-menu" src="./assets/menu.svg" alt="">
             </div>
-            <nav id="myLinks" class="bg-dark-50 nav absolute w-full top-full left-0 pb-8 bg-header px-4 hidden lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
-                <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-8">
-                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Proyectos</a></li>
-                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Recursos</a></li>
-                    <li><a href="./about.html" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-0 lg:mb-0">Acerca de mí</a></li>
-                    <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0">
-                        <a href="./contact.html" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contáctame</a>
+            <nav id="myLinks" class="bg-opacity-modal nav absolute w-5/6 top-full right-0 pb-8 bg-header px-4 h-svh hidden lg:h-auto lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
+                <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
+                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Proyectos</a></li>
+                    <li class="hidden relative group">
+                        <a class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">
+                            Services
+                            <img src="./assets/dropdown.svg" alt="" class="pl-2"/>
+                        </a>
+                        <ul class="absolute top-full left-0 right-0 p-1 rounded-lg bg-dark-100 w-60 hidden lg:group-hover:block">
+                            <li><a href="./landing-page.html" class="flex px-4 py-3 sm:py-4 text-base text-surface-300 hover:text-surface-50 hover:bg-opacity-primary rounded">
+                                <img src="./assets/icon-browsers.svg" alt="" class="mr-2"> 
+                                Landing Page</a>
+                            </li>
+                            <li><a href="./landing-page.html" class="flex px-4 py-3 sm:py-4 text-base text-surface-300 hover:text-surface-50 hover:bg-opacity-primary rounded">
+                                <img src="./assets/icon-desktop.svg" alt="" class="mr-2"> 
+                                Website Redesign</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 💻 Landing Page</a></li>
+                    <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 🎨 Website Redesign</a></li>
+                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recursos</a></li>
+                    <li><a href="./about.html" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Acerca de mí</a></li>
+                    <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0 lg:pl-6">
+                        <a href="./contact.html" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contacto</a>
                     </div>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="banner-top mt-14 p-6 flex justify-center items-start lg:mt-24">
+    <section class="banner-top mt-14 p-6 max-w-screen-2xl m-auto h-52 mb-8 md:h-72 md:mb-16 2xl:mb-24 flex justify-center items-center lg:mt-24">
+        <h1 class="text-2xl text-center sm:leading-normal text-surface-100 sm:text-4xl lg:text-5xl lg:leading-normal 2xl:text-6xl 2xl:leading-normal">
+            Échale un vistazo <br> a mis Proyectos</h1>
     </section>
-    <section  class="px-4 -mt-10 flex justify-center sm:px-8 sm:-mt-16 mb-8 lg:mb-16">
-        <div class="w-full max-w-4xl flex items-start p-4 border border-surface-900 bg-dark-50 rounded-lg gap-4 sm:p-6 sm:rounded-2xl lg:p-8">
-            <img class="block w-10 sm:w-16" src="./assets/color-fill.png" alt="icono de proyectos" >
-            <div class="flex flex-col sm:gap-2">
-                <p class="text-base text-surface-300 font-bold sm:text-xl lg:text-2xl">Proyectos</p>
-                <p class="text-base text-surface-400 sm:text-xl lg:text-2xl">UX/UI Design</p>
+    <section id="projects" class="flex justify-center px-4 mb-24 sm:px-8 xl:mb-40">
+        <div class="grid max-w-screen-xl gap-16 lg:grid-cols-2">
+            
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-space.png" class="block rounded-lg border border-surface-900" alt="portada On Energy">
+                </div>
+                <div class="flex flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Proyecto</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">Space Design System</h3>
+                    </div>
+                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Space Design System ha sido un viaje de aprendizaje, desde enfrentar fracasos hasta ver cómo el proyecto empieza a dar frutos.</p>
+                    <div class="flex gap-4">
+                        <a href="./project-space-ds.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">Ver Proyecto
+                             <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-onenergy.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
+                </div>
+                <div class="flex flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Proyecto</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">On Energy Rediseño Web</h3>
+                    </div>
+                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Como Diseñador UI, mi enfoque en el proyecto On Energy fue mejorar la identidad de la marca a través de la optimización de su sitio web.</p>
+                    <div class="flex gap-4">
+                        <a href="./project-on-energy.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">Ver Proyecto <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
+                    </div>
+                </div>
+            </article>
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-adidas.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
+                </div>
+                <div class="flex w-full flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">🚧 | En progreso</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">Caso de Estudio Adidas</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Design Thinking</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">UX Research</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Information Architecture</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Style Guide</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Usability Testing</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Advanced Prototyping</p>
+                    </div>
+                </div>
+            </article>
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-bcp.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
+                </div>
+                <div class="flex w-full flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">🚧 | En progreso</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">Análisis de Accesibilidad BCP</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Color Constrast</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Responsive Layout</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Shortcuts</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">WCAG Standars</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Focus Indicators</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Accessible Navigation</p>
+                    </div>
+                    
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="flex flex-col gap-6 sm:gap-8 lg:gap-16 overflow-hidden mb-16 xl:mb-40 max-w-screen-xl mx-auto">
+        <div class="flex flex-col gap-11">
+            <div class="flex flex-col gap-6">
+                <h2 class="text-surface-100 text-2xl text-center sm:text-3xl lg:text-4xl">Todos mis proyectos</h2>
+                <p class="text-base text-center text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Si quieres ver todos mis proyectos, <br>
+                    por favor contáctame.</p>
+            </div>
+            <div class="flex justify-center gap-6">
+                <a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank">
+                    <i class="fa-brands fa-linkedin text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+                <a href="https://www.instagram.com/josefloresdesign" target="_blank">
+                    <i class="fa-brands fa-instagram text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank">
+                    <i class="fa-brands fa-youtube text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+                <a href="mailto:joseflores.design@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+            </div>
+        </div>
+        <div class="wrap-tools relative flex overflow-hidden">
+            <div class="flex row-tools shrink-0">
+                <img src="./assets/img-design-01.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-02.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-03.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-04.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-05.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-06.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-07.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+            </div>
+            <div class="flex row-tools shrink-0">
+                <img src="./assets/img-design-01.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-02.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-03.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-04.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-05.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-06.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-07.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
             </div>
         </div>
     </section>
-    <section id="projects" class="px-4 mb-24 sm:px-8 lg:flex lg:justify-center xl:mb-40 2xl:mb-52">
-        <div class="flex flex-col items-center gap-8 lg:max-w-screen-xl sm:gap-6 2xl:gap-16">
-            <div class="flex flex-col gap-8 sm:flex-row sm:justify-center sm:gap-6 2xl:gap-16 max-w-screen-2xl">
-                <a href="./project-ferias-cciap.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
-                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
-                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-ferias.webp" alt="portada proyecto Ferias CCIAP">
-                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
-                            <p class="text-base font-bold text-surface-50 xl:text-2xl">Brand + UI Design</p>
-                            <p class="text-base text-surface-300 xl:text-2xl">APP Ferias CCIAP</p>
-                        </div>
-                    </article>
-                </a>
-                <a href="./project-max-positivo.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
-                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
-                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-maxpositivo.webp" alt="portada proyecto Max Positivo">
-                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
-                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
-                            <p class="text-base text-surface-300 xl:text-2xl">APP Max Positivo</p>
-                        </div>
-                    </article>
-                </a>
-            </div>
-            <div class="flex flex-col gap-8 sm:flex-row sm:justify-center sm:gap-6 2xl:gap-16 max-w-screen-2xl">
-                <a href="./project-w3schools.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
-                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
-                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-w3schools.webp" alt="portada proyecto W3schools">
-                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
-                            <p class="text-base font-bold text-surface-50 xl:text-2xl">Rediseño - UI Design</p>
-                            <p class="text-base text-surface-300 xl:text-2xl">W3schools</p>
-                        </div>
-                    </article>
-                </a>
-                <a href="./project-sana.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
-                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
-                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-sana.webp" alt="portada proyecto Sana">
-                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
-                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UX/UI Design</p>
-                            <p class="text-base text-surface-300 xl:text-2xl">Sana</p>
-                        </div>
-                    </article>
-                </a>
-            </div>
-            <div class="flex flex-col gap-8 sm:flex-row sm:justify-center sm:gap-6 2xl:gap-16 max-w-screen-2xl">
-                <a href="./project-puzzle.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
-                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
-                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-puzzle.webp" alt="portada proyecto Puzzle">
-                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
-                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
-                            <p class="text-base text-surface-300 xl:text-2xl">Puzzle</p>
-                        </div>
-                    </article>
-                </a>
-                <a href="./project-apache.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
-                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
-                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-apache.webp" alt="portada proyecto Apache">
-                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
-                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
-                            <p class="text-base text-surface-300 xl:text-2xl">Apache</p>
-                        </div>
-                    </article>
-                </a>
-            </div>
-            <div class="flex flex-col gap-8 sm:flex-row sm:justify-center sm:gap-6 2xl:gap-16 max-w-screen-2xl">
-                <a href="./project-on-energy.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
-                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
-                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-on-energy.webp" alt="portada proyecto ON Energy">
-                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
-                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
-                            <p class="text-base text-surface-300 xl:text-2xl">ON Energy</p>
-                        </div>
-                    </article>
-                </a>
-                <a href="./project-tedx-lima.html" class="sm:basis-1/2" data-aos="fade-up" data-aos-duration="1000">
-                    <article class="relative rounded-lg overflow-hidden xl:rounded-2xl">
-                        <img loading="lazy" class="block hover:scale-105 transition-transform duration-300" src="./assets/img-p-tedxlima.webp" alt="portada proyecto TEDX Lima">
-                        <div class="absolute bottom-0 left-0 right-0 caption-project px-4 pb-3 pt-10 xl:px-6 xl:pb-6 xl:pt-16">
-                            <p class="text-base font-bold text-surface-50 xl:text-2xl">UI Design</p>
-                            <p class="text-base text-surface-300 xl:text-2xl">TEDx Lima</p>
-                        </div>
-                    </article>
-                </a>
-            </div>
-        </div>
-    </section>
-    <footer class="flex flex-col gap-8 px-4 py-10 lg:items-center">
-        <div class="flex flex-col gap-8 lg:flex-row w-full lg:justify-between lg:px-8 lg:max-w-screen-xl">
+    
+    <footer class="flex flex-col py-12 lg:items-center">
+        <div class="flex flex-col px-4  gap-8 lg:flex-row w-full lg:justify-between lg:px-8 lg:max-w-screen-2xl">
             <div class="flex flex-col gap-4 items-start">
                 <img src="./assets/new-logo-footer.svg" alt="imagen del logo de la página">
                 <div>
-                    <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Perú - Junín - Huancayo</p>
+                    <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Huancayo -  Perú</p>
                     <p class="text-base text-surface-300 sm:text-lg sm:leading-normal">Av. Universitaria Saños Chico</p>
                 </div>
             </div>
             <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-lg font-bold text-surface-300">Páginas</h4>
+                    <h4 class="text-lg font-bold text-surface-300">Paginas</h4>
                     <ul class="flex flex-col gap-2">
                         <li><a href="./projects.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Proyectos</a></li>
                         <li><a href="./resources.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Recursos</a></li>
                         <li><a href="./about.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Acerca de mí</a></li>
-                        <li><a href="./contact.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contáctame</a></li>
+                        <li><a href="./contact.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="flex flex-col gap-4">
                     <h4 class="text-lg font-bold text-surface-300">Contacto</h4>
                     <ul class="flex flex-col gap-2">
-                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Email</a></li>
+                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
                         <li><a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/josefloresdesign" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Instagram</a></li>
                         <li><a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">YouTube</a></li>
@@ -194,7 +265,7 @@
                 </div>
             </div>
         </div>
-        <small class="text-base text-surface-300 text-center xl:mt-16">© 2024 Todos los derechos reservados</small>
+        <small class="text-base text-surface-300 text-center mt-12">© 2024 Todos los derechos reservados</small>
     </footer>
     <script src="./js/app.js"></script>
 </body>
