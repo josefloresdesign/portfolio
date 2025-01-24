@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +23,12 @@
     </script>
     <script src="https://kit.fontawesome.com/ed0744c023.js" crossorigin="anonymous"></script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        #introduction, #challenges, #lessons, #research, #documentation, #state {
+            scroll-margin-top: 140px;
+        }
         body {
             cursor: url("./assets/figma-cursor.png"), auto;
         }
@@ -71,7 +77,7 @@
             </div>
             <nav id="myLinks" class="bg-opacity-modal nav absolute w-5/6 top-full right-0 pb-8 bg-header px-4 h-svh hidden lg:h-auto lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
                 <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
-                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Proyectos</a></li>
+                    <li><a href="index.html#projects" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Projects</a></li>
                     <li class="hidden relative group">
                         <a class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">
                             Services
@@ -90,10 +96,11 @@
                     </li>
                     <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 💻 Landing Page</a></li>
                     <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 🎨 Website Redesign</a></li>
-                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recursos</a></li>
-                    <li><a href="./about.html" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Acerca de mí</a></li>
+                    <li><a href="index.html#resources" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Resources</a></li>
+                    <li><a href="index.html#about-me" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">About me</a></li>
+                    <li><a href="index.html#recommendations" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recommendations</a></li>
                     <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0 lg:pl-6">
-                        <a href="./contact.html" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contacto</a>
+                        <a href="index.html#contact" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contact</a>
                     </div>
                 </ul>
             </nav>
@@ -102,64 +109,65 @@
     <section class="banner-top mt-14 p-6 max-w-screen-2xl m-auto h-52 mb-8 md:h-72 md:mb-16 2xl:mb-24 flex justify-center items-center lg:mt-24">
         <h1 class="text-2xl text-center sm:leading-normal text-surface-100 sm:text-4xl lg:text-5xl lg:leading-normal 2xl:text-6xl 2xl:leading-normal">
             Space Design System<br>
-            del fracaso al “éxito”</h1>
+            From Failure to Success</h1>
     </section>
     
     <div class="flex xl:items-start gap-10 2xl:gap-16 px-4 sm:px-8 max-w-screen-2xl mx-auto">
         <aside class="hidden xl:block w-72 shrink-0 sticky top-0 left-0 pt-36 -mt-36">
             <ul class="flex flex-col gap-8">
-                <li><a href="#introduction" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-document.svg" alt="" class="w-6 h-6 mr-4">Introducción</a></li>
-                <li><a href="#challenges" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-videocam.svg" alt="" class="w-6 h-6 mr-4">Retos</a></li>
-                <li><a href="#lessons" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-color-palette.svg" alt="" class="w-6 h-6 mr-4">Lecciones Aprendidas</a></li>
-                <li><a href="#research" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-search.svg" alt="" class="w-6 h-6 mr-4">Redención</a></li>
-                <li><a href="#documentation" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-map.svg" alt="" class="w-6 h-6 mr-4">Documentación</a></li>
-                <li><a href="#state" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-reload.svg" alt="" class="w-6 h-6 mr-4">Estado Actual</a></li>
+                <li><a href="#introduction" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-document.svg" alt="" class="w-6 h-6 mr-4">Introduction</a></li>
+                <li><a href="#challenges" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-videocam.svg" alt="" class="w-6 h-6 mr-4">Challenges</a></li>
+                <li><a href="#lessons" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-color-palette.svg" alt="" class="w-6 h-6 mr-4">Lessons</a></li>
+                <li><a href="#research" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-search.svg" alt="" class="w-6 h-6 mr-4">Redemption</a></li>
+                <li><a href="#documentation" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-map.svg" alt="" class="w-6 h-6 mr-4">Documentation</a></li>
+                <li><a href="#state" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-reload.svg" alt="" class="w-6 h-6 mr-4">Current Status</a></li>
             </ul>
         </aside>
         <div class="flex flex-col gap-16 lg:gap-24 mb-16 lg:mb-24 xl:mb-40">
             <section id="introduction" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Introducción</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">La idea de crear mi propio Sistema de Diseño ha estado conmigo durante muchos años. Como Diseñador UI, he trabajado en equipos que ni siquiera tenían una Guía de Estilo. Esta experiencia me llevó a tomar la iniciativa de guiarlos en este aspecto fundamental.</p> 
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Recuerdo que cuando me proponia diseñar una landing page para un cliente, me di cuenta de que la mayoría de los buenos Sistemas de Diseño eran de pago. Fue entonces cuando decidí crear mi primer Sistema de Diseño gratuito, con el objetivo de ofrecer una alternativa de código abierto que facilitara la adopción de Sistemas de Diseño en los equipos de diseño y desarrollo. Lo llamé "Yuru", que en Quechua significa "pequeña taza". Este viaje me permitió explorar temas como la accesibilidad, las convenciones de nombres, la consistencia, la escalabilidad y mucho más.</p> 
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Introduction</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">From the beginning of my career as a UX/UI Designer, the idea of creating my own Design System has been a constant dream. In many teams where I worked, we didn't even have a Style Guide, which led me to take the initiative in this crucial aspect of design.</p> 
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">One day, while designing a landing page for a client, I realized that the best Design Systems available were paid, which pushed me to create a free, open-source alternative. Thus, "Yuru" was born, a word that means "little cup" in Quechua. This project aimed not only to facilitate the adoption of Design Systems but also to promote accessibility, consistency, and scalability in design and development teams.</p> 
                 <img src="./assets/img-space-01.png" alt="" class="rounded-lg">
             </section>
             <section id="challenges" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Desafíos y Objetivos</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Al comenzar el proyecto, intenté reclutar amigos y conocidos que eran expertos en el sector, pero debido a problemas de tiempo y personales, no pudieron unirse. Decidí hacerlo por mi cuenta, pensando que, aunque fracasara, ganaría más experiencia y me adentraría más en el mundo de los Sistemas de Diseño.</p> 
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Challenges and Goals</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Starting this project was no easy task. I tried to recruit friends and expert colleagues, but due to personal and time commitments, they couldn't join. I decided to continue on my own, firmly believing that, even if I failed, I would gain invaluable experience and delve deeper into the world of Design Systems.</p> 
                 <img src="./assets/img-space-02.png" alt="" class="rounded-lg">
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Durante varios meses trabajé en este proyecto, primero analizando otros Sistemas de Diseño y frameworks frontend, entendiendo cómo funcionan y diseñando el DS en Figma. Paralelamente, comencé a documentar estos componentes y estilos en CSS, tratando de mantener una convención de nombres uniforme en diseño y desarrollo.</p> 
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">For several months, I immersed myself in analyzing other Design Systems and frontend frameworks, uncovering their secrets and designing my system in Figma. Simultaneously, I documented components and styles in CSS, striving to maintain a consistent naming convention between design and development.</p> 
                 <img src="./assets/img-space-03.png" alt="" class="rounded-lg">
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">This process taught me a lot about the importance of documentation and consistency in a Design System. I spent countless nights fine-tuning details, adjusting components, and ensuring everything aligned with industry best practices.</p> 
                 <div class="flex gap-4">
                     <a href="https://github.com/jotajotadev/yuru-design-system/tree/main" target="_blank" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">GitHub Code <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
                 </div>
             </section>
             <section id="lessons" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Lecciones aprendidas</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Después de varios meses de trabajo, el proyecto no tuvo el éxito esperado. Solo obtuvo 28 descargas en Figma y nadie utilizó la guía de estilo implementada en CSS. Esta situación fue muy desmotivadora y frustrante para mí, pero aprendí lecciones valiosas:</p> 
-                <ul class="pace-y-4">
-                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">1. - El nombre del proyecto dificultó su posicionamiento orgánico en los motores de búsqueda.</li>
-                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">2. - Trabajar en la versión del framework sin tener usuarios en Figma no fue la mejor decisión.</li>
-                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">3. - No pude llegar al público que necesitaba mi Sistema de Diseño.</li>
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Lessons Learned</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">After months of hard work, the project did not achieve the expected success. It only received 28 downloads on Figma, and no one used the CSS style guide. Though disheartening, the lessons learned were invaluable:</p> 
+                <ul class="pace-y-4 flex flex-col pl-6 list-disc gap-4">
+                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Project Name: Choosing an appropriate name is crucial for search engine positioning. "Yuru" was too obscure and difficult to find.</li>
+                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Active Users: Developing the framework without a user base on Figma was a strategic mistake that limited its adoption.</li>
+                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Target Audience: I failed to reach the target audience that truly needed my Design System, which affected its success.</li>
                 </ul>
             </section>
             <section id="research" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Redención e Investigación</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Después de varios meses de pausa, comencé a preguntarme qué habría pasado con mi Sistema de Diseño sin todos los errores que cometí. Así comenzó mi historia de “redención” con Space Design System.</p> 
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Para mi segundo Sistema de Diseño, decidí resolver los problemas de Yuru. Primero, elegí un nombre relacionado con el espacio y el universo, que también me permitiría posicionarme mejor: "Space Design System". Aquí están los primeros conceptos del nombre y el logo.</p> 
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Redemption and Research</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">After a pause to reflect on the mistakes made, I wondered how things could have been different. This gave birth to the "redemption" story with the Space Design System.</p> 
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">For my second attempt, I resolved the issues with Yuru. I chose a more evocative name related to space, improving its positioning: "Space Design System". This new approach allowed me to connect better with my audience and position the project more effectively.</p> 
                 <img src="./assets/img-space-04.png" alt="" class="rounded-lg">
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Continué mapeando Sistemas de Diseño de referencia, enfocándome primero en la versión en Figma y, si alcanzaba las 10,000 descargas, lanzaría la versión del framework. Me inspiré en Sistemas de Diseño como Atlassian DS, Carbon de IBM y GitHub, y frameworks frontend como TailwindCSS y Bootstrap. También tomé cursos especializados y leí artículos sobre fundamentos de DS, siendo autodidacta en este campo.</p> 
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I mapped out reference Design Systems, like Atlassian DS, IBM's Carbon, and GitHub, and from frameworks like TailwindCSS and Bootstrap. I also took specialized courses and read articles to educate myself, allowing me to improve and refine my approach.</p> 
                 <img src="./assets/img-space-05.png" alt="" class="rounded-lg">
             </section>
             <section id="documentation" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Diseño y Documentación</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Desde noviembre de 2022 hasta la fecha, he estado trabajando en esta nueva versión, documentando sus fundamentos, implementando componentes con un enfoque en accesibilidad y usabilidad, y realizando mejoras continuas. Durante este proceso, compartí mi Sistema de Diseño en foros de diseño y desarrollo. A pesar de enfrentar algunas críticas y comentarios desagradables por parte de algunos desarrolladores, estas experiencias me impulsaron a seguir trabajando con más determinación.</p> 
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">El punto de inflexión llegó cuando un gurú del diseño recomendó mi Sistema. A partir de ese momento, las descargas comenzaron a aumentar de manera significativa, validando el esfuerzo y dedicación invertidos en el proyecto.</p> 
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Al momento de escribir este caso de estudio, Space Design System ha alcanzado las 9,200 descargas en la comunidad de Figma. Fue un esfuerzo que me tomó un año y medio, pero valió cada segundo. Noches sin dormir, mucho café y un par de podcasts de fondo.</p> 
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Design and Documentation</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Since November 2022, I have worked tirelessly on this new version. I documented the foundations, implemented components with a focus on accessibility and usability, and made continuous improvements based on community feedback.</p> 
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I shared my system in design and development forums, facing constructive criticism and negative comments that, far from discouraging me, motivated me to improve. The turning point came when a design guru recommended my system, significantly increasing downloads and validating the effort invested.</p>  
                 <img src="./assets/img-space-06.png" alt="" class="rounded-lg">
             </section>
             <section id="state" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Estado Actual</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Actualmente, estoy construyendo una capa de personalización para frameworks como Bootstrap y TailwindCSS para llevar mi Sistema de Diseño a código. Ha sido un viaje increíble, con muchas personas apoyando el proyecto. Sin duda, comenzar cualquier cosa es difícil, pero lo más importante es no rendirse.</p> 
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Current Status and Future</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Today, Space Design System has reached 9,200 downloads in the Figma community. It has been a year and a half of effort, but every second was worth it, with sleepless nights, lots of coffee, and some background podcasts.</p> 
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Currently, I am working on a customization layer for frameworks like Bootstrap and TailwindCSS, bringing my Design System to code. This journey has been incredible, with great support from the community. Starting any project is difficult, but the most important thing is not to give up.</p> 
                 <div class="flex gap-4">
                     <a href="https://www.figma.com/community/file/1335673212969292007/space-ds" target="_blank" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">Space Design System <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
                 </div>
@@ -168,7 +176,10 @@
                 <img src="./assets/img-chat-3d.png" alt="Imagen 3d de burbuja de chat" class="w-40 lg:w-80">
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-5">
-                        <h2 class="text-2xl text-surface-300 mb-0 sm:text-4xl sm:leading-normal xl:text-5xl xl:leading-normal">¿Estás listo para <strong class="font-bold text-primary-100">comenzar </strong> un nuevo proyecto? 🚀</h2>
+                        <h2 class="text-2xl text-surface-300 mb-0 sm:text-4xl sm:leading-normal xl:text-5xl xl:leading-normal">Are you ready to start a <strong class="text-primary-100">new project? 🚀</strong></h2>
+                    <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
+                        I'm just a click away!
+                    </p>
                     </div>
                     <div class=" flex gap-6">
                         <a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank">
@@ -176,9 +187,6 @@
                         </a>
                         <a href="https://www.instagram.com/josefloresdesign" target="_blank">
                             <i class="fa-brands fa-instagram text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank">
-                            <i class="fa-brands fa-youtube text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
                         </a>
                         <a href="mailto:joseflores.design@gmail.com" target="_blank">
                             <i class="fa-solid fa-envelope text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
@@ -199,35 +207,34 @@
             </div>
             <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-lg font-bold text-surface-300">Paginas</h4>
+                    <h4 class="text-lg font-bold text-surface-300">Pages</h4>
                     <ul class="flex flex-col gap-2">
-                        <li><a href="./projects.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Proyectos</a></li>
-                        <li><a href="./resources.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Recursos</a></li>
-                        <li><a href="./about.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Acerca de mí</a></li>
-                        <li><a href="./contact.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
+                        <li><a href="index.html#projects" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Projects</a></li>
+                        <li><a href="index.html#resources" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Resources</a></li>
+                        <li><a href="index.html#about-me" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">About me</a></li>
+                        <li><a href="index.html#contact" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contact</a></li>
                     </ul>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-lg font-bold text-surface-300">Contacto</h4>
+                    <h4 class="text-lg font-bold text-surface-300">Contact</h4>
                     <ul class="flex flex-col gap-2">
-                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
+                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Email</a></li>
                         <li><a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/josefloresdesign" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Instagram</a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">YouTube</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <small class="text-base text-surface-300 text-center mt-12">© 2024 Todos los derechos reservados</small>
+        <small class="text-base text-surface-300 text-center mt-12">© 2024 All rights reserved</small>
     </footer>
     <script src="./js/app.js"></script>
-    <script>
+    <!-- <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
     
                 const target = document.querySelector(this.getAttribute('href'));
-                const offset = 50; // Ajusta este valor según sea necesario
+                const offset = 50;
                 const bodyRect = document.body.getBoundingClientRect().top;
                 const elementRect = target.getBoundingClientRect().top;
                 const elementPosition = elementRect - bodyRect;
@@ -239,6 +246,6 @@
                 });
             });
         });
-    </script>
+    </script> -->
 </body>
 </html>

@@ -23,6 +23,12 @@
     </script>
     <script src="https://kit.fontawesome.com/ed0744c023.js" crossorigin="anonymous"></script>
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        #description, #sitemap, #wireframe, #motion, #style-guide, #mockup {
+            scroll-margin-top: 140px;
+        }
         body {
             cursor: url("./assets/figma-cursor.png"), auto;
         }
@@ -71,7 +77,7 @@
             </div>
             <nav id="myLinks" class="bg-opacity-modal nav absolute w-5/6 top-full right-0 pb-8 bg-header px-4 h-svh hidden lg:h-auto lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
                 <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
-                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Proyectos</a></li>
+                    <li><a href="index.html#projects" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Projects</a></li>
                     <li class="hidden relative group">
                         <a class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">
                             Services
@@ -90,10 +96,11 @@
                     </li>
                     <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 💻 Landing Page</a></li>
                     <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 🎨 Website Redesign</a></li>
-                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recursos</a></li>
-                    <li><a href="./about.html" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Acerca de mí</a></li>
+                    <li><a href="index.html#resources" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Resources</a></li>
+                    <li><a href="index.html#about-me" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">About me</a></li>
+                    <li><a href="index.html#recommendations" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recommendations</a></li>
                     <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0 lg:pl-6">
-                        <a href="./contact.html" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contacto</a>
+                        <a href="index.html#contact" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contact</a>
                     </div>
                 </ul>
             </nav>
@@ -101,14 +108,14 @@
     </header>
     <section class="banner-top mt-14 p-6 max-w-screen-2xl m-auto h-52 mb-8 md:h-72 md:mb-16 2xl:mb-24 flex justify-center items-center lg:mt-24">
         <h1 class="text-2xl text-center sm:leading-normal text-surface-100 sm:text-4xl lg:text-5xl lg:leading-normal 2xl:text-6xl 2xl:leading-normal">
-            Renovación de Marca a <br>
-            través del Diseño UI</h1>
+            Reinforcing Brand Identity <br>
+            through Web Design</h1>
     </section>
     
     <div class="flex xl:items-start gap-10 2xl:gap-16 px-4 sm:px-8 max-w-screen-2xl mx-auto">
         <aside class="hidden xl:block w-72 shrink-0 sticky top-0 left-0 pt-36 -mt-36">
             <ul class="flex flex-col gap-8">
-                <li><a href="#description" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-document.svg" alt="" class="w-6 h-6 mr-4">Descripción</a></li>
+                <li><a href="#description" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-document.svg" alt="" class="w-6 h-6 mr-4">Description</a></li>
                 <li><a href="#sitemap" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-map.svg" alt="" class="w-6 h-6 mr-4">SiteMap</a></li>
                 <li><a href="#wireframe" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-search.svg" alt="" class="w-6 h-6 mr-4">Wireframe</a></li>
                 <li><a href="#motion" class="flex text-base text-surface-300 hover:text-surface-50 "><img src="./assets/icon-reload.svg" alt="" class="w-6 h-6 mr-4">Motion</a></li>
@@ -118,27 +125,27 @@
         </aside>
         <div class="flex flex-col gap-16 lg:gap-24 mb-16 lg:mb-24 xl:mb-40">
             <section id="description" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Descripción del Proyecto</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Como UI Designer en el proyecto de On Energy, mi objetivo principal fue reforzar la identidad de la marca mediante la optimización de su sitio web. Para ello, diseñé un Sitemap detallado que organizó la información de manera efectiva y mejoró la experiencia del usuario. Establecí un Design System coherente para asegurar una consistencia visual y funcional en toda la plataforma.</p> 
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Project Description</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">As a designer on the On Energy project, my main objective was to strengthen the brand identity by optimizing its website. To achieve this, I designed a detailed Sitemap that effectively organized the information and improved the user experience. I established a consistent Design System to ensure visual and functional coherence across the platform.</p> 
                 <ul class="list-disc pl-5 space-y-4">
-                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal"><strong>Optimización Efectiva del Sitio Web:</strong> Reestructuración completa del sitio para mejorar la navegación y la experiencia del usuario.</li>
-                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal"><strong>Desarrollo de un Design System Coherente:</strong> Implementación de un sistema de diseño que asegura consistencia visual y funcional en toda la plataforma.</li>
-                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal"><strong>Iteraciones Basadas en Feedback:</strong> Proceso continuo de mejora mediante iteraciones, ajustando la interfaz y la arquitectura según las necesidades del usuario.</li>
+                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal"><strong>Effective Website Optimization:</strong> Complete restructuring of the site to enhance navigation and user experience.</li>
+                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal"><strong>Development of a Consistent Design System:</strong> Implementation of a design system that ensures visual and functional consistency across the platform.</li>
+                    <li class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal"><strong>Feedback-Based Iterations:</strong> Continuous improvement process through iterations, adjusting the interface and architecture according to user needs.</li>
                 </ul>                               
             </section>
             <section id="sitemap" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">SiteMap</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Para estructurar de manera efectiva el contenido del sitio web de On Energy, desarrollé un Sitemap exhaustivo. Este mapa de sitio sirvió como la columna vertebral del proyecto, organizando de manera lógica las secciones y sub-secciones del sitio para asegurar una navegación intuitiva. La creación de un Sitemap detallado permitió establecer una jerarquía clara de la información, facilitando una experiencia de usuario fluida y eficiente.</p> 
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Sitemap</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">PTo effectively structure the content of On Energy's website, I developed an exhaustive Sitemap. This site map served as the backbone of the project, logically organizing the sections and subsections of the site to ensure intuitive navigation. Creating a detailed Sitemap allowed for a clear hierarchy of information, facilitating a smooth and efficient user experience.</p> 
                 <img src="./assets/img-on-sitemap.jpg" alt="" class="rounded-lg">
             </section>
             <section id="wireframe" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
                 <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Wireframes</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Los wireframes que diseñé para On Energy ofrecieron una representación visual básica del sitio web, destacando la estructura y el flujo de la interfaz sin distracciones de diseño. Estos bocetos permitieron visualizar la disposición de los elementos clave y la interacción del usuario con el contenido, asegurando que la arquitectura de la información fuera sólida antes de avanzar a las etapas de diseño más detalladas.</p> 
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">The wireframes I designed for On Energy provided a basic visual representation of the website, highlighting the structure and flow of the interface without design distractions. These sketches allowed us to visualize the layout of key elements and the user's interaction with the content, ensuring that the information architecture was solid before moving on to more detailed design stages.</p> 
                 <img src="./assets/img-on-wireframe.jpg" alt="" class="rounded-lg">
             </section>
             <section id="motion" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Motion y Animaciones</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Desarrollé animaciones en CSS con el propósito de visualizar de manera efectiva la aplicación de la identidad de marca. A pesar de que estas animaciones no se incluyeron en el proyecto debido a restricciones tecnológicas, la experiencia resultó en un valioso aprendizaje.</p> 
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Motion and Animations</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I developed CSS animations to effectively visualize the application of the brand identity. Although these animations were not included in the project due to technological constraints, the experience was a valuable learning opportunity.</p> 
                 <div>
                     <iframe height="417" style="width: 100%;" scrolling="no" title="Loading On Enenrgy" src="https://codepen.io/jotajotaff/embed/VwmwxLr?default-tab=&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
                         See the Pen <a href="https://codepen.io/jotajotaff/pen/VwmwxLr">
@@ -155,15 +162,15 @@
                 </div>
             </section>
             <section id="style-guide" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
-                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Librería de Componentes y Style Guide</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Desarrollé una librería de componentes y estilos que asegura la coherencia visual y funcional a lo largo de la plataforma. Esta librería incluye todos los elementos reutilizables, desde botones y formularios hasta estilos tipográficos y paletas de colores. Al establecer estándares claros y componentes predefinidos, garantizamos una experiencia de usuario consistente y eficiente en cada interacción.</p> 
+                <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Component Library and Style Guide</h2>
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I developed a component and style library that ensures visual and functional coherence throughout the platform. This library includes all reusable elements, from buttons and forms to typographic styles and color palettes. By establishing clear standards and predefined components, we guaranteed a consistent and efficient user experience in every interaction.</p> 
                 <img src="./assets/img-on-style-1.jpg" alt="" class="rounded-lg">
                 <img src="./assets/img-on-style-2.jpg" alt="" class="rounded-lg">
                 <img src="./assets/img-on-style-3.jpg" alt="" class="rounded-lg">
             </section>
             <section id="mockup" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
                 <h2  class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Mockups</h2>
-                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Los mockups fueron una fase crucial en el proceso de diseño, donde transformé los wireframes en representaciones visuales más detalladas del sitio web. Estos mockups proporcionaron una visión clara de cómo se verían las páginas finales, incorporando elementos gráficos, tipografía y colores. A través de iteraciones y ajustes basados en feedback, perfeccioné la apariencia y funcionalidad para reflejar fielmente la identidad de marca de On Energy.</p> 
+                <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">The mockups were a crucial phase in the design process, where I transformed the wireframes into more detailed visual representations of the website. These mockups provided a clear vision of how the final pages would look, incorporating graphic elements, typography, and colors. Through iterations and feedback-based adjustments, I refined the appearance and functionality to faithfully reflect On Energy's brand identity.</p> 
                 <img src="./assets/img-on-mockup-1.jpg" alt="" class="rounded-lg">
                 <img src="./assets/img-on-mockup-2.jpg" alt="" class="rounded-lg">
                 <img src="./assets/img-on-mockup-3.jpg" alt="" class="rounded-lg">
@@ -175,17 +182,16 @@
                 <img src="./assets/img-chat-3d.png" alt="Imagen 3d de burbuja de chat" class="w-40 lg:w-80">
                 <div class="flex flex-col gap-8">
                     <div class="flex flex-col gap-5">
-                        <h2 class="text-2xl text-surface-300 mb-0 sm:text-4xl sm:leading-normal xl:text-5xl xl:leading-normal">¿Estás listo para <strong class="font-bold text-primary-100">comenzar </strong> un nuevo proyecto? 🚀</h2>
-                    </div>
+                        <h2 class="text-2xl text-surface-300 mb-0 sm:text-4xl sm:leading-normal xl:text-5xl xl:leading-normal">Are you ready to start a <strong class="text-primary-100">new project? 🚀</strong></h2>
+                    <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
+                        I'm just a click away!
+                    </p>
                     <div class=" flex gap-6">
                         <a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank">
                             <i class="fa-brands fa-linkedin text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
                         </a>
                         <a href="https://www.instagram.com/josefloresdesign" target="_blank">
                             <i class="fa-brands fa-instagram text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
-                        </a>
-                        <a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank">
-                            <i class="fa-brands fa-youtube text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
                         </a>
                         <a href="mailto:joseflores.design@gmail.com" target="_blank">
                             <i class="fa-solid fa-envelope text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
@@ -206,29 +212,28 @@
             </div>
             <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-lg font-bold text-surface-300">Paginas</h4>
+                    <h4 class="text-lg font-bold text-surface-300">Pages</h4>
                     <ul class="flex flex-col gap-2">
-                        <li><a href="./projects.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Proyectos</a></li>
-                        <li><a href="./resources.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Recursos</a></li>
-                        <li><a href="./about.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Acerca de mí</a></li>
-                        <li><a href="./contact.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
+                        <li><a href="index.html#projects" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Projects</a></li>
+                        <li><a href="index.html#resources" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Resources</a></li>
+                        <li><a href="index.html#about-me" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">About me</a></li>
+                        <li><a href="index.html#contact" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contact</a></li>
                     </ul>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-lg font-bold text-surface-300">Contacto</h4>
+                    <h4 class="text-lg font-bold text-surface-300">Contact</h4>
                     <ul class="flex flex-col gap-2">
-                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
+                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Email</a></li>
                         <li><a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/josefloresdesign" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Instagram</a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">YouTube</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <small class="text-base text-surface-300 text-center mt-12">© 2024 Todos los derechos reservados</small>
+        <small class="text-base text-surface-300 text-center mt-12">© 2024 All rights reserved</small>
     </footer>
     <script src="./js/app.js"></script>
-    <script>
+    <!-- <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -246,6 +251,6 @@
                 });
             });
         });
-    </script>
+    </script> -->
 </body>
 </html>

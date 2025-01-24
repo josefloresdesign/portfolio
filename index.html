@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.josefloresdesign.com/">
     <meta property="og:image" content="./assets/portada-home.jpg">
-    <title>Portafolio - José Flores</title>
+    <title>Portfolio - José Flores</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link rel="stylesheet" href="./css/output.css">
     <script type="text/javascript">
@@ -47,8 +47,8 @@
             border-radius: 20px;       
             border: 3px solid #1A1A1A;  
         }
-        #projects {
-            scroll-margin-top: 32px;
+        #projects, #resources, #about-me, #recommendations, #contact {
+            scroll-margin-top: 140px;
         }
         .caption-project {
             background: linear-gradient(180deg, rgba(12, 13, 15, 0) 0%, #0C0D0F 100%);
@@ -70,6 +70,36 @@
         .bg-wireframe {
             background-image: url(./assets/bento-6.png);
             background-size: cover;
+        }
+
+        @keyframes tool-animation {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .row-tools {
+            animation: tool-animation 70s linear infinite
+        }
+
+        .wrap-tools::before,
+        .wrap-tools::after {
+                content: "";
+                position: absolute;
+                z-index: 20;
+                width: 200px;
+                height: 100%;
+        }
+        .wrap-tools::before {
+            left: 0px;
+            background: linear-gradient(270deg, rgba(11, 11, 14, 0.00) 0%, #0B0B0E 100%);
+        }
+        .wrap-tools::after {
+            right: 0px;
+            background: linear-gradient(-270deg, rgba(11, 11, 14, 0.00) 0%, #0B0B0E 100%);
         }
         
         @keyframes h-scroll {
@@ -176,7 +206,7 @@
             </div>
             <nav id="myLinks" class="bg-opacity-modal nav absolute w-5/6 top-full right-0 pb-8 bg-header px-4 h-svh hidden lg:h-auto lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
                 <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
-                    <li><a href="./projects.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Proyectos</a></li>
+                    <li><a href="#projects" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Projects</a></li>
                     <li class="hidden relative group">
                         <a class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">
                             Services
@@ -195,280 +225,473 @@
                     </li>
                     <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 💻 Landing Page</a></li>
                     <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 🎨 Website Redesign</a></li>
-                    <li><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recursos</a></li>
-                    <li><a href="./about.html" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Acerca de mí</a></li>
+                    <li><a href="#resources" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Resources</a></li>
+                    <li><a href="#about-me" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">About me</a></li>
+                    <li><a href="#recommendations" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recommendations</a></li>
                     <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0 lg:pl-6">
-                        <a href="./contact.html" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contacto</a>
+                        <a href="#contact" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contact</a>
                     </div>
                 </ul>
             </nav>
         </div>
     </header>
     <section class="custom-bg h-screen flex items-center justify-center px-4 sm:px-8 lg:px-10">
-        <article class="flex flex-col gap-10 sm:gap-12 lg:max-w-screen-lg 2xl:max-w-4xl">
+        <article class="flex flex-col gap-10 sm:gap-12 lg:max-w-3xl 2xl:max-w-4xl">
             <div class="flex flex-col gap-4 lg:flex-row lg:gap-16 lg:items-start">
                 <div class="flex flex-col gap-12 xl:gap-16">
                     <div class="header-hero flex flex-col items-center gap-6 lg:gap-6 xl:gap-8">
-                        <h1 class="text-2xl leading-normal text-center text-surface-100 sm:leading-snug sm:text-5xl 2xl:text-6xl 2xl:leading-snug">Soy el Puente de Comunicación entre Diseñadores y Developers</h1>
-                        <p class="text-xl text-center text-surface-300 leading-normal sm:leading-normal md:leading-normal lg:leading-normal sm:text-2xl lg:text-3xl 2xl:text-4xl 2xl:leading-normal">Diseño Design Systems que impulsan el ROI y <br class="hidden md:block"> garantizan experiencias escalables.</p>
+                        <h1 class="text-3xl leading-normal text-center text-surface-100 sm:leading-snug sm:text-5xl 2xl:text-6xl 2xl:leading-snug">I create <strong class="text-primary-100">scalable products</strong> and services with a <strong class="text-primary-100"> holistic visions</strong></h1>
+                        <p class="text-lg text-center text-surface-300 leading-normal sm:leading-normal md:leading-normal lg:leading-normal sm:text-2xl lg:text-3xl 2xl:text-4xl 2xl:leading-normal">With a focus on collaboration with developers and stakeholders to ensure our designs meet user needs</p>
                     </div>
                     <div class="footer-hero flex justify-center">
                         <a href="#projects" class="flex gap-4">
                             <img class="animate-bounce p-2 border-2 text-surface-300 rounded-full w-12 2xl:w-16" src="./assets/arrow-down.svg" alt="icono de scroll de desplazamiento vertical">
-                            <p class="text-base text-surface-300 sm:text-lg 2xl:text-2xl">Ver Proyectos</p>
+                            <p class="text-lg text-surface-300 sm:text-2xl">See projects</p>
                         </a>
                     </div>
                 </div>
             </div>
         </article>
     </section>
-    <section id="projects" class="pt-24 px-4 mb-24 sm:px-8 xl:mb-40 2xl:mb-52">
-        <div class="flex flex-col gap-16 items-center lg:gap-24">
+    <section id="projects" class="flex flex-col items-center gap-16 lg:gap-24 px-4 mb-24 sm:px-8 xl:mb-40">
+        <header class="flex flex-col gap-4 max-w-3xl xl:gap-6">
+            <h2 class="text-2xl text-surface-100 text-center mb-0 sm:text-4xl xl:text-5xl">Projects</h2>
+            <p class="text-base text-surface-300 text-center sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Take a look at my Projects</p>
+        </header>
+        <div class="grid max-w-screen-xl gap-16 lg:grid-cols-2">
             
-            <article class="flex flex-col gap-6 lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-xl">
-                <div class="lg:w-1/2 lg:order-1">
-                    <img loading="lazy" src="./assets/img-p-space.png" loading="lazy" class="block rounded-lg border border-surface-900" alt="portada Space Design System">
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-space.png" class="block rounded-lg border border-surface-900" alt="portada On Energy">
                 </div>
-                <div class="flex flex-col gap-6 sm:gap-8 lg:w-1/2">
+                <div class="flex flex-col gap-6 sm:gap-8">
                     <div class="flex flex-col gap-3">
-                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Proyecto</p>
+                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Project</p>
                         <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">Space Design System</h3>
                     </div>
-                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Space Design System ha sido un viaje de aprendizaje, desde enfrentar fracasos hasta ver cómo el proyecto empieza a dar frutos.
-                    </p>
+                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">I share my adventure of failure and learning in building this project from scratch and seeing how it is achieving relative success.</p>
                     <div class="flex gap-4">
-                        <a href="./project-space-ds.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">Ver proyecto <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
+                        <a href="./project-space-ds.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">View Project <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
                     </div>
                 </div>
             </article>
             
-            <article class="flex flex-col gap-6 lg:flex-row lg:items-center 2xl:gap-16 lg:max-w-screen-xl">
-                <div class="lg:w-1/2">
-                    <img loading="lazy" src="./assets/img-p-onenergy.png" loading="lazy" class="block rounded-lg border border-surface-900" alt="portada On Energy">
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-onenergy.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
                 </div>
-                <div class="flex flex-col gap-6 sm:gap-8 lg:w-1/2">
+                <div class="flex flex-col gap-6 sm:gap-8">
                     <div class="flex flex-col gap-3">
-                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Proyecto</p>
-                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">On Energy Rediseño Web</h3>
+                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Project</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">On Energy Website Redesign</h3>
                     </div>
-                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Como Diseñador UI, mi enfoque en el proyecto On Energy fue mejorar la identidad de la marca a través de la optimización de su sitio web.</p>
+                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">My focus on the On Energy project was to enhance the brand identity through the optimization of their website.</p>
                     <div class="flex gap-4">
-                        <a href="./project-on-energy.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">Ver proyecto <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
+                        <a href="./project-on-energy.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">View Project <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
                     </div>
+                </div>
+            </article>
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-adidas.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
+                </div>
+                <div class="flex w-full flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">🚧 | Work in progress</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">Adidas | Case Study</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Design Thinking</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">UX Research</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Information Architecture</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Style Guide</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Usability Testing</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Advanced Prototyping</p>
+                    </div>
+                </div>
+            </article>
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-bcp.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
+                </div>
+                <div class="flex w-full flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">🚧 | Work in progress</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">BCP | Accessibility Analysis</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Color Constrast</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Responsive Layout</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Shortcuts</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">WCAG Standars</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Focus Indicators</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Accessible Navigation</p>
+                    </div>
+                    
                 </div>
             </article>
         </div>
     </section>
-    <section class="flex justify-center px-4 sm:px-8 xl:mb-40 2xl:mb-52 ">
-        <div class="flex flex-col gap-8 lg:max-w-screen-xl lg:gap-16">
-            <header class="flex flex-col gap-6 lg:gap-8">
-                <div>
-                    <p class="text-sm text-surface-300 sm:text-lg">🗺️ | Workflow</p>
-                    <h2 class="text-2xl text-surface-100 mb-0 sm:text-4xl xl:text-5xl">Mi Proceso de Trabajo</h2>
-                </div>
-                <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">En cada proyecto, profundizo en los casos de usuario y en el análisis de datos para crear interfaces intuitivas y efectivas. Aplico sistemas de diseño para garantizar consistencia y eficiencia, asegurándome de que todo se alinee con las necesidades y comportamientos del usuario.</p>
-            </header>
-            <section>
-                <div class="flex flex-col gap-6">
-                    <div class="flex flex-col gap-6 lg:flex-row">
-                        <div class="relative">
-                            <span  class="absolute top-6 left-6 text-sm px-3 py-1 bg-surface-50 rounded-full border text-primary-400">Estilos Tipográficos</span>
-                            <img src="./assets/bento-1.png" loading="lazy" alt="imagen de Estilos Tipográficos" class="rounded-lg">
-                        </div>
-                        <div class="relative">
-                            <span  class="absolute top-6 left-6 text-sm px-3 py-1 bg-surface-50 rounded-full border text-primary-400">Mockup</span>
-                            <img src="./assets/bento-2.png" loading="lazy" alt="Imagen de un mockup web" class="rounded-lg">
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-6 lg:flex-row">
-                        <div class="relative lg:w-1/2">
-                            <span  class="absolute top-6 left-6 text-sm px-3 py-1 bg-surface-50 rounded-full border text-primary-400">Colores</span>
-                            <img src="./assets/bento-3.png" loading="lazy" alt="Imagen de un sistema de colores" class="rounded-lg">
-                        </div>
-                        <div class="flex lg:w-1/2 flex-col gap-6 lg:flex-row">
-                            <div class="flex lg:w-1/2 flex-col gap-6">
-                                <div class="relative">
-                                    <span  class="absolute top-6 left-6 text-sm px-3 py-1 bg-surface-50 rounded-full border text-primary-400">Libreria de Componentes</span>
-                                    <img src="./assets/bento-4.png" loading="lazy" alt="imagen de una Libreria de Componentes" class="rounded-lg">
-                                </div>
-                                <div class="relative">
-                                    <span  class="absolute top-6 left-6 text-sm px-3 py-1 bg-surface-50 rounded-full border text-primary-400">Site Map</span>
-                                    <img src="./assets/bento-5.png" loading="lazy" alt="imagen de un Sitemap" class="rounded-lg">
-                                </div>
-                            </div>
-                            <div class="opacity-0 lg:opacity-100 lg:w-1/2 overflow-hidden bg-primary-200 rounded-lg">
-                                <div class="relative bg-wireframe w-full h-full">
-                                    <span  class="absolute top-6 left-6 text-sm px-3 py-1 bg-surface-50 rounded-full border text-primary-400">Wireframes</span>
-                                    <img src="./assets/bento-6.png" loading="lazy" alt="imagen de un Wireframe" class="opacity-0 h-0">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    <section class="flex flex-col gap-6 sm:gap-8 lg:gap-16 overflow-hidden mb-16 xl:mb-40 max-w-screen-xl mx-auto">
+        <div class="wrap-tools relative flex overflow-hidden">
+            <div class="flex row-tools shrink-0">
+                <img src="./assets/img-design-01.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-02.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-03.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-04.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-05.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-06.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-07.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+            </div>
+            <div class="flex row-tools shrink-0">
+                <img src="./assets/img-design-01.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-02.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-03.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-04.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-05.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-06.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-07.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+            </div>
         </div>
-
+        <div class="flex flex-col gap-11">
+            <div class="flex flex-col gap-6">
+                <p class="text-base text-center text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">If you want to see all my projects, <br/>
+                    please contact me.</p>
+            </div>
+            <div class="flex justify-center gap-6">
+                <a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank">
+                    <i class="fa-brands fa-linkedin text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+                <a href="https://www.instagram.com/josefloresdesign" target="_blank">
+                    <i class="fa-brands fa-instagram text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+                <a href="mailto:joseflores.design@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+            </div>
+        </div>
     </section>
-    <section class="pt-24 px-4 flex flex-col items-center gap-8 mb-24 sm:px-8 lg:gap-16 xl:mb-40 2xl:mb-52">
+    <section id="resources" class="flex flex-col items-center gap-16 lg:gap-24 mb-16 lg:mb-24 px-4 sm:px-8 xl:mb-40 max-w-screen-xl mx-auto">
         <header class="flex flex-col gap-4 max-w-3xl xl:gap-6">
-            <h2 class="text-2xl text-surface-100 text-center mb-0 sm:text-4xl xl:text-5xl">Recomendaciones</h2>
-            <p class="text-base text-surface-300 text-center sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Como diseñador, he tenido la fortuna de trabajar con personas maravillosas que me han ayudado a crecer como profesional.</p>
+            <h2 class="text-2xl text-surface-100 text-center mb-0 sm:text-4xl xl:text-5xl">Resources</h2>
+            <p class="text-base text-surface-300 text-center sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Resources for UX/UI Designers and Developers</p>
         </header>
-        <div class="wrap-recomendations relative flex flex-col gap-6 lg:flex-row w-full overflow-hidden lg:gap-0 lg:max-w-screen-2xl">
-            <div class="row-scroll flex flex-col items-center gap-6 shrink-0 lg:items-stretch lg:flex-row lg:gap-0">
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-sebas.png" class="w-10 sm:w-12 xl:w-16" alt="imagen de Sebastián">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Sebastián Pacheco</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">Sr. Backend Developer | Delfosti</p>
-                        </div>
-
+        <section id="figma" class="flex flex-col gap-6 sm:gap-8">
+            <h3 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Downloadable for your projects</h3>
+            <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-color-palette.png" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Color Palette</h3>
+                        <p class="text-surface-300 text-base sm:text-lg">A color system that has name-conventions, accessibility levels</p>
                     </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            Colaborar con José fue excelente. Su comprensión del diseño y el código ayudó enormemente a su rápida integración con nuestro equipo, facilitando la implementación del producto.
-                        </p>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 25 +</p>
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 609 +</p>
+                        </div>
+                        <a href="https://www.figma.com/community/file/1338986260032944916/color-palette-for-design-systems" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
                     </div>
                 </article>
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-cata.png" class="w-10 sm:w-12 xl:w-16" alt="imagen de Catalina">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Catalina Vinet</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">UX/UI Designer | Tapp Caja los Andes</p>
-                        </div>
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-guide 1.png" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">The perfect Font</h3>
+                        <p class="text-surface-300 text-base sm:text-lg">This is a guide that will allow you to choose the best font for your brand.</p>
                     </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            Tuve la oportunidad de trabajar con José en un proyecto y su capacidad para integrar feedback y su disposición a escuchar realmente destacaron. Aprecie cómo su enfoque colaborativo y su habilidad para adaptarse rápidamente contribuyeron significativamente a la calidad del proyecto.
-                        </p>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 2 +</p>
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 26 +</p>
+                        </div>
+                        <a href="https://www.figma.com/community/file/1382456210694693234/guide-to-choosing-a-font-for-your-brand" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
                     </div>
                 </article>
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-kev.png" class="w-10 sm:w-12 xl:w-16" alt="Imagen de Kevin">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Kevin Mazuelos</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">Digital Designer | Freelancer</p>
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-space-ds.png" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Space Design System</h3>
+                        <p class="text-surface-300 text-base sm:text-lg">Space is a DS created to share resources and build community.</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 482 +</p>
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 9.6 k +</p>
                         </div>
-                    </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            José es capo como diseñador UI, fue mi compañero de trabajo en Wally y aprendí mucho de el, es ágil y claro con sus objetivos fue una gran experiencia y aprendizaje constante trabajar a su lado.
-                        </p>
-                    </div>
-                </article>
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-ron.png" class="w-10 sm:w-12 xl:w-16" alt="Imagen de Ronald">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Ronald Bustamante</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">Growth Manager | Guinea Mobile</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            No voy a comentar las capacidades técnicas de José porque la excelente calidad de sus entregas hablan por si mismas. Si consideramos mencionar acerca de aspectos que no se pueden descubrir en un portafolio: disposición, entrega y absoluta integración en el equipo para llegar a los objetivos de la empresa.
-                        </p>
-                    </div>
-                </article>
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-tab.png" class="w-10 sm:w-12 xl:w-16" alt="Imagen de Tabatha">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Tabatha R.</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">Freelancer</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            Colaborar con José fue una gran experiencia. Su capacidad para cumplir con los plazos prometidos y la calidad de su trabajo fueron impresionantes. Además, su disposición y rapidez hicieron que trabajar con él fuera muy sencillo y efectivo
-                        </p>
+                        <a href="https://www.figma.com/community/file/1335673212969292007/space-ds" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
                     </div>
                 </article>
             </div>
-            <div class="hidden row-scroll lg:flex flex-col items-center gap-6 shrink-0 lg:items-stretch lg:flex-row lg:gap-0">
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-sebas.png" class="w-10 sm:w-12 xl:w-16" alt="imagen de Sebastián">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Sebastián Pacheco</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">Sr. Backend Developer | Delfosti</p>
-                        </div>
-
+        </section>
+        <section id="templates" class="flex flex-col gap-6 sm:gap-8">
+            <h3 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Templates</h3>
+            <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-template-1.jpg" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Travel booking website</h3>
                     </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            Colaborar con José fue excelente. Su comprensión del diseño y el código ayudó enormemente a su rápida integración con nuestro equipo, facilitando la implementación del producto.
-                        </p>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Investment: $ 0</p>
+                        </div>
+                        <a href="https://josefdesign.gumroad.com/l/template-travel-booking" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
                     </div>
                 </article>
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-cata.png" class="w-10 sm:w-12 xl:w-16" alt="imagen de Catalina">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Catalina Vinet</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">UX/UI Designer | Tapp Caja los Andes</p>
-                        </div>
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-template-2.jpg" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Landing Pet Adoption</h3>
                     </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            Tuve la oportunidad de trabajar con José en un proyecto y su capacidad para integrar feedback y su disposición a escuchar realmente destacaron. Aprecie cómo su enfoque colaborativo y su habilidad para adaptarse rápidamente contribuyeron significativamente a la calidad del proyecto.
-                        </p>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Investment: $ 0</p>
+                        </div>
+                        <a href="https://josefdesign.gumroad.com/l/template-landing-adoption" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
                     </div>
                 </article>
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-kev.png" class="w-10 sm:w-12 xl:w-16" alt="Imagen de Kevin">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Kevin Mazuelos</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">Digital Designer | Freelancer</p>
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-template-3.jpg" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Web Ecommerce free</h3>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Investment: $ 0</p>
                         </div>
-                    </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            José es capo como diseñador UI, fue mi compañero de trabajo en Wally y aprendí mucho de el, es ágil y claro con sus objetivos fue una gran experiencia y aprendizaje constante trabajar a su lado.
-                        </p>
-                    </div>
-                </article>
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-ron.png" class="w-10 sm:w-12 xl:w-16" alt="Imagen de Ronald">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Ronald Bustamante</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">Growth Manager | Guinea Mobile</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            No voy a comentar las capacidades técnicas de José porque la excelente calidad de sus entregas hablan por si mismas. Si consideramos mencionar acerca de aspectos que no se pueden descubrir en un portafolio: disposición, entrega y absoluta integración en el equipo para llegar a los objetivos de la empresa.
-                        </p>
-                    </div>
-                </article>
-                <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 lg:ml-8 2xl:p-12">
-                    <div class="flex gap-4 items-start">
-                        <img src="./assets/img-tab.png" class="w-10 sm:w-12 xl:w-16" alt="Imagen de Tabatha">
-                        <div>
-                            <p class="text-base text-surface-300 xl:text-xl">Tabatha R.</p>
-                            <p class="text-base font-bold text-surface-300 xl:text-xl">Freelancer</p>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
-                            Colaborar con José fue una gran experiencia. Su capacidad para cumplir con los plazos prometidos y la calidad de su trabajo fueron impresionantes. Además, su disposición y rapidez hicieron que trabajar con él fuera muy sencillo y efectivo
-                        </p>
+                        <a href="https://josefdesign.gumroad.com/l/template-ecommerce" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
                     </div>
                 </article>
             </div>
-        </div>
+        </section>
+        
     </section>
-    <section class="px-4 flex justify-center items-center mb-24 sm:gap-8 sm:px-8 xl:mb-40 2xl:mb-52">
+    <section id="about-me" class="overflow-hidden flex flex-col gap-16 lg:gap-24 px-4 sm:px-8 mb-16 lg:mb-24 xl:mb-40 max-w-screen-xl mx-auto">
+        <section id="about" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
+            <h2 class="text-2xl text-surface-100 mb-0 sm:text-4xl xl:text-5xl">About me</h2>
+            <div class="md:flex md:gap-8 xl:gap-20">
+                <img src="./assets/image profile.webp" alt="profile image" class="self-start rounded-lg sm:max-w-80 2xl:max-w-96">
+                <div class="flex flex-col gap-6">
+                    <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">Hi, I'm José Flores, 🤚 UX/UI Designer. I focus on building and implementing scalable and functional Design Systems, with solid knowledge in Design Thinking, Sprint and other methodologies. </p> 
+                    <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I have worked with Startups, companies in the banking, retail, fintech and private clients, transforming their products and services. 🚀  Throughout my career, I have developed a holistic view of the problems faced by products and services, which allows me to propose scalable solutions that positively impact the ROI of companies. </p> 
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
+            <h2 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Soft-Skills</h2>
+            <div class="flex flex-col gap-6 lg:flex-row">
+                <div class="flex flex-col gap-6 ">
+                    <article class="skill-card flex flex-col gap-4 p-4 border-surface-800 border rounded-lg sm:p-8 lg:p-12">
+                        <p class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal font-bold">Research capacity 📊</p> 
+                        <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I conduct usability studies and analyze user data to inform my design decisions, identifying friction points and creating solutions that improve the user experience.</p> 
+                    </article>
+                    <article class="skill-card flex flex-col gap-4 p-4 border-surface-800 border rounded-lg sm:p-8 lg:p-12">
+                        <p class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal font-bold">Strategic design 🎯</p> 
+                        <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I think beyond aesthetics, creating Design Systems that improve visual consistency and impact ROI.</p> 
+                    </article>
+                </div>
+                <article class="skill-card flex flex-col gap-4 p-4 border-surface-800 border rounded-lg sm:p-8 lg:p-12">
+                    <p class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal font-bold">Adaptability 🧩 </p> 
+                    <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I have worked in various sectors, adjusting to different work cultures and design methodologies, always with a focus on accessibility and usability.</p> 
+                </article>
+            </div>
+        </section>
+
+
+        <section class="flex flex-col gap-6 sm:gap-8 lg:gap-10 overflow-hidden">
+            <h2 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Toolkits</h2>
+            <div class="wrap-tools relative flex overflow-hidden">
+                <div class="flex row-tools shrink-0">
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-webflow.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Webflow</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-tailwindcss.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Tailwind</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-miro.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Miro</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-jira.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Jira</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-hotjar.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Hotjar</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-notion.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Notion</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-figma.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Figma</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-html.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">HTML</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-photoshop.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Photoshop</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-css.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">CSS</p>
+                    </div>
+                </div>
+                <div class="flex row-tools shrink-0">
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-webflow.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Webflow</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-tailwindcss.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Tailwind</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-miro.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Miro</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-jira.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Jira</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-hotjar.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Hotjar</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-notion.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Notion</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-figma.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Figma</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-html.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">HTML</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-photoshop.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">Photoshop</p>
+                    </div>
+                    <div class="w-20 md:w-32 ml-4 shrink-0 md:ml-6">
+                        <img src="./assets/tool-css.png" alt="" class="rounded-lg mb-2">
+                        <p class="text-surface-300">CSS</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    <section id="recommendations" class="pt-24 px-4 flex flex-col items-center gap-8 mb-24 sm:px-8 lg:gap-16 xl:mb-40 2xl:mb-52">
+        <header class="flex flex-col gap-4 max-w-3xl xl:gap-6">
+            <h2 class="text-2xl text-surface-100 text-center mb-0 sm:text-4xl xl:text-5xl">Recommendations</h2>
+            <p class="text-base text-surface-300 text-center sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">As a Designer, I have been fortunate to work with wonderful people who have helped me grow as a professional.</p>
+        </header>
+        
+        <div class="grid gap-6 lg:grid-cols-2 2xl:gap-12">
+            <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 2xl:p-12">
+                <div class="flex gap-4 items-start">
+                    <img src="./assets/img-sebas.png" class="w-10 sm:w-12 xl:w-16" alt="imagen de Sebastián">
+                    <div>
+                        <p class="text-base text-surface-300 xl:text-xl">Sebastián Pacheco</p>
+                        <p class="text-base font-bold text-surface-300 xl:text-xl">Sr. Backend Developer | Delfosti</p>
+                    </div>
+
+                </div>
+                <div>
+                    <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
+                        Collaborating with José was excellent. His understanding of design and code greatly aided his quick integration with our team, facilitating the product's implementation.
+                    </p>
+                </div>
+            </article>
+            <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 2xl:p-12">
+                <div class="flex gap-4 items-start">
+                    <img src="./assets/img-cata.png" class="w-10 sm:w-12 xl:w-16" alt="imagen de Catalina">
+                    <div>
+                        <p class="text-base text-surface-300 xl:text-xl">Catalina Vinet</p>
+                        <p class="text-base font-bold text-surface-300 xl:text-xl">UX/UI Designer | Tapp Caja los Andes</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
+                        I had the opportunity to work with José on a project, and his ability to integrate feedback and his willingness to listen truly stood out. I appreciated how his collaborative approach and his ability to adapt quickly significantly contributed to the quality of the project.
+                    </p>
+                </div>
+            </article>
+            <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 2xl:p-12">
+                <div class="flex gap-4 items-start">
+                    <img src="./assets/img-kev.png" class="w-10 sm:w-12 xl:w-16" alt="Imagen de Kevin">
+                    <div>
+                        <p class="text-base text-surface-300 xl:text-xl">Kevin Mazuelos</p>
+                        <p class="text-base font-bold text-surface-300 xl:text-xl">Digital Designer | Freelancer</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
+                        José is a top-notch Designer. He was my coworker at Wally, and I learned a lot from him. He is quick and clear with his goals. Working alongside him was a great experience and a constant learning opportunity.
+                    </p>
+                </div>
+            </article>
+            <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 2xl:p-12">
+                <div class="flex gap-4 items-start">
+                    <img src="./assets/img-ron.png" class="w-10 sm:w-12 xl:w-16" alt="Imagen de Ronald">
+                    <div>
+                        <p class="text-base text-surface-300 xl:text-xl">Ronald Bustamante</p>
+                        <p class="text-base font-bold text-surface-300 xl:text-xl">Growth Manager | Guinea Mobile</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
+                        I won't comment on José's technical skills because the excellent quality of his work speaks for itself. I do consider it important to mention aspects that can't be discovered in a portfolio: his willingness, dedication, and absolute integration into the team to achieve the company's objectives.
+                    </p>
+                </div>
+            </article>
+            <article class="bg-recomendation border border-surface-700 rounded-lg p-4 flex flex-col gap-6 shrink-0 lg:max-w-screen-sm sm:p-8 2xl:p-12">
+                <div class="flex gap-4 items-start">
+                    <img src="./assets/img-tab.png" class="w-10 sm:w-12 xl:w-16" alt="Imagen de Tabatha">
+                    <div>
+                        <p class="text-base text-surface-300 xl:text-xl">Tabatha R.</p>
+                        <p class="text-base font-bold text-surface-300 xl:text-xl">Freelancer</p>
+                    </div>
+                </div>
+                <div>
+                    <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
+                        Collaborating with José was a great experience. His ability to meet promised deadlines and the quality of his work were impressive. Additionally, his willingness and quickness made working with him very simple and effective.
+                    </p>
+                </div>
+            </article>
+        </div>
+            
+    </section>
+    <section id="contact" class="px-4 flex justify-center items-center mb-24 sm:gap-8 sm:px-8 xl:mb-40 2xl:mb-52">
         <article class="flex w-full flex-col gap-4 lg:flex-row lg:gap-16 lg:items-center lg:max-w-screen-lg lg:px-8 xl:px-0">
             <img src="./assets/img-chat-3d.png" loading="lazy" alt="Imagen 3d de burbuja de chat" class="w-40 lg:w-80">
             <div class="flex flex-col gap-8">
                 <div class="flex flex-col gap-5">
-                    <h2 class="text-2xl text-surface-300 mb-0 sm:text-4xl sm:leading-normal xl:text-5xl xl:leading-normal">¿Estás listo para <strong class="font-bold text-primary-100">comenzar </strong> un nuevo proyecto? 🚀</h2>
+                    <h2 class="text-2xl text-surface-300 mb-0 sm:text-4xl sm:leading-normal xl:text-5xl xl:leading-normal">Are you ready to start a <strong class="text-primary-100">new project? 🚀</strong></h2>
+                    <p class="text-base sm:text-xl sm:leading-normal text-surface-300 2xl:text-2xl 2xl:leading-normal">
+                        I'm just a click away!
+                    </p>
                 </div>
                 <div class="flex gap-6">
                     <a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank">
@@ -476,9 +699,6 @@
                     </a>
                     <a href="https://www.instagram.com/josefloresdesign" target="_blank">
                         <i class="fa-brands fa-instagram text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank">
-                        <i class="fa-brands fa-youtube text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
                     </a>
                     <a href="mailto:joseflores.design@gmail.com" target="_blank">
                         <i class="fa-solid fa-envelope text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
@@ -498,26 +718,25 @@
             </div>
             <div class="flex flex-col gap-8 lg:flex-row lg:gap-16">
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-lg font-bold text-surface-300">Paginas</h4>
+                    <h4 class="text-lg font-bold text-surface-300">Pages</h4>
                     <ul class="flex flex-col gap-2">
-                        <li><a href="./projects.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Proyectos</a></li>
-                        <li><a href="./resources.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Recursos</a></li>
-                        <li><a href="./about.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Acerca de mí</a></li>
-                        <li><a href="./contact.html" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
+                        <li><a href="#projects" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Projects</a></li>
+                        <li><a href="#resources" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Resources</a></li>
+                        <li><a href="#about-me" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">About me</a></li>
+                        <li><a href="#contact" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contact</a></li>
                     </ul>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <h4 class="text-lg font-bold text-surface-300">Contacto</h4>
+                    <h4 class="text-lg font-bold text-surface-300">Contact</h4>
                     <ul class="flex flex-col gap-2">
-                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contacto</a></li>
+                        <li><a href="mailto:josefigma@gmail.com" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Email</a></li>
                         <li><a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">LinkedIn</a></li>
                         <li><a href="https://www.instagram.com/josefloresdesign" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Instagram</a></li>
-                        <li><a href="https://www.youtube.com/channel/UCcOPB9T2C1Ya1vGgdiVaeBg" target="_blank" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">YouTube</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <small class="text-base text-surface-300 text-center mt-12">© 2024 Todos los derechos reservados</small>
+        <small class="text-base text-surface-300 text-center mt-12">© 2024 All rights reserved</small>
     </footer>
     <script src="./js/app.js"></script>
 </body>
