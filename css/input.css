@@ -1,4 +1,40 @@
+@import "tailwindcss";
+
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {  
+    --color-*: initial;
+    --color-mint-500: oklch(0.72 0.11 178);
+    --color-surface-50: #FFFFFF;
+    --color-surface-100: #F7F9FD;
+    --color-surface-200: #ECEDEE;
+    --color-surface-300: #CBCFD2;
+    --color-surface-400: #A7AEB4;
+    --color-surface-500: #8E979F;
+    --color-surface-600: #6B767F;
+    --color-surface-700: #4F575E;
+    --color-surface-800: #33383D;
+    --color-surface-900: #202327;
+    --color-primary-50: #F8F5FF;
+    --color-primary-100: #B89CFC;
+    --color-primary-200: #7D49F8;
+    --color-primary-300: #6528F7;
+    --color-primary-400: #501BCE;
+    --color-secondary-50: #E8F1FC;
+    --color-secondary-100: #77A9EE;
+    --color-secondary-200: #1B6DDF;
+    --color-secondary-300: #1450A3;
+    --color-secondary-400: #114388;
+    --color-success-50: #F6FEFB;
+    --color-success-100: #1BC590;
+    --color-success-200: #12825F;
+    --color-success-300: #0E674B;
+    --color-success-400: #0A4834;
+    --color-opacity-primary: rgba(125, 73, 248, 0.15);
+    --color-opacity-modal: rgba(11, 11, 14, 0.98);
+    --color-dark-50: #0B0B0E;
+    --color-dark-100: #161616;
+    --color-dark-200: #1A1A1A;
+    --color-dark-300: #1C1C1C;
+    --color-dark-400: #1E1E1E;
+}
+/* @plugin "tailwindcss-motion"; */
