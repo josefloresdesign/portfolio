@@ -502,6 +502,9 @@
       max-width: 96rem !important;
     }
   }
+  .m-9 {
+    margin: calc(var(--spacing) * 9);
+  }
   .m-auto {
     margin: auto;
   }
@@ -634,6 +637,9 @@
   .h-3 {
     height: calc(var(--spacing) * 3);
   }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
   .h-6 {
     height: calc(var(--spacing) * 6);
   }
@@ -658,11 +664,17 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
   .w-3 {
     width: calc(var(--spacing) * 3);
+  }
+  .w-5 {
+    width: calc(var(--spacing) * 5);
   }
   .w-5\/6 {
     width: calc(5/6 * 100%);
@@ -1606,6 +1618,9 @@
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
+  }
+  .p-9 {
+    padding: calc(var(--spacing) * 9);
   }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);

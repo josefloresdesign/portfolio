@@ -3,27 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soy José Flores, un apasionado UI Designer con más de 4 años de experiencia. Explora mi portafolio para descubrir proyectos innovadores y recursos útiles para developers y designers.">
-    <meta name="keywords" content="UI Design, UX Design, Recursos de Diseño, Tutoriales de UI, Sistemas de Diseño, Portafolio UI, Experiencia de Usuario, Diseño de Interfaz">
+    <meta name="description" content="Hello, I'm José Flores, a UX/UI Designer. I specialize in building and implementing scalable and functional Design Systems, with a strong background in Design Thinking, Sprint, and other methodologies. I've worked with startups, banking sector companies, retail, fintech, and private clients, transforming their products and services.">
+    <meta name="keywords" content="UX Design, Resources, Design Systems">
     <meta name="author" content="José Flores Fernández">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
-    <meta property="og:title" content="Portafolio - José Flores">
-    <meta property="og:description" content="Soy José Flores, un apasionado UI Designer con más de 4 años de experiencia. Explora mi portafolio para descubrir proyectos innovadores y recursos útiles para developers y designers.">
+    <meta property="og:title" content="Portfolio - José Flores">
+    <meta property="og:description" content="Hello, I'm José Flores, a UX/UI Designer. I specialize in building and implementing scalable and functional Design Systems, with a strong background in Design Thinking, Sprint, and other methodologies.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.josefloresdesign.com/">
     <meta property="og:image" content="./assets/portada-home.jpg">
     <title>Portfolio - José Flores Design</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
     <link href="./css/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "mty66opj5j");
-    </script> -->
     <script src="https://kit.fontawesome.com/ed0744c023.js" crossorigin="anonymous"></script>
     <style>
         html {
@@ -51,26 +43,9 @@
         #projects, #resources, #about-me, #recommendations, #contact {
             scroll-margin-top: 140px;
         }
-        .caption-project {
-            background: linear-gradient(180deg, rgba(12, 13, 15, 0) 0%, #0C0D0F 100%);
-            position:relative
-        }
-        .custom-bg::before {
-            position: absolute;
-            content: "";
-            background-image: url(./assets/img-hero-website.webp);
-            background-size: cover;
-            right: 0;
-            width: 50%;
-            height: 90%;
-            z-index: -10;
-        }
+
         .bg-recomendation {
             background: radial-gradient(circle at 0% 0%, hsla(130, 100%, 95%, 0.08), hsl(228, 8%, 5%));
-        }
-        .bg-wireframe {
-            background-image: url(./assets/bento-6.png);
-            background-size: cover;
         }
 
         @keyframes tool-animation {
@@ -194,52 +169,67 @@
                 right: 15%;
             }
         }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(80px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.5s ease-out;
+        }
     </style>
 </head>
 <body class="bg-dark-50">
-    <header id="main-header" class="bg-dark-50 fixed top-0 left-0 right-0 z-30 flex justify-center p-4 sm:px-8 lg:p-6">
+    <header class="bg-dark-50 fixed top-0 left-0 right-0 z-30 flex justify-center p-4 sm:px-8 lg:p-6">
         <div class="w-full max-w-screen-2xl flex justify-between items-center 2xl:px-8">
-            <a href="index.html" class="lg:mr-8">
-                <img src="./assets/logo-header-v2.svg" alt="logo de la página" class="sm:h-5">
-            </a>
-            <div onclick="openNav()" class="lg:hidden flex flex-col justify-center items-center rounded-md gap-1 p-2 w-11 h-11 bg-dark-100">
-                <img id="icon-menu" src="./assets/menu.svg" alt="">
-            </div>
-            <nav id="myLinks" class="bg-opacity-modal nav absolute w-5/6 top-full right-0 pb-8 bg-header px-4 h-svh hidden lg:h-auto lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
-                <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
-                    <li><a href="#projects" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Projects</a></li>
-                    <li class="hidden relative group">
-                        <a class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">
-                            Services
-                            <img src="./assets/dropdown.svg" alt="" class="pl-2"/>
-                        </a>
-                        <ul class="absolute top-full left-0 right-0 p-1 rounded-lg bg-dark-100 w-60 hidden lg:group-hover:block">
-                            <li><a href="./landing-page.html" class="flex px-4 py-3 sm:py-4 text-base text-surface-300 hover:text-surface-50 hover:bg-opacity-primary rounded">
-                                <img src="./assets/icon-browsers.svg" alt="" class="mr-2"> 
-                                Landing Page</a>
-                            </li>
-                            <li><a href="./landing-page.html" class="flex px-4 py-3 sm:py-4 text-base text-surface-300 hover:text-surface-50 hover:bg-opacity-primary rounded">
-                                <img src="./assets/icon-desktop.svg" alt="" class="mr-2"> 
-                                Website Redesign</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 💻 Landing Page</a></li>
-                    <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 🎨 Website Redesign</a></li>
-                    <li><a href="#resources" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Resources</a></li>
-                    <li><a href="#about-me" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">About me</a></li>
-                    <li><a href="#recommendations" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recommendations</a></li>
-                    <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0 lg:pl-6">
-                        <a href="#contact" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contact</a>
-                    </div>
+          <a href="index.html" class="lg:mr-8">
+            <img src="./assets/logo-header-v2.svg" alt="logo de la página" class="sm:h-5">
+          </a>
+          <div onclick="openNav()" class="flex lg:hidden flex-col justify-center items-center rounded-md gap-1 p-2 w-11 h-11 bg-dark-100">
+            <img id="icon-menu" src="./assets/menu.svg" alt="">
+          </div>
+          <nav id="myLinks" class="bg-opacity-modal nav absolute w-5/6 top-full right-0 pb-8 bg-header px-4 h-svh hidden lg:h-auto lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
+            <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
+              <li><a href="index.html#projects" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Projects</a></li>
+              <li class="hidden relative group">
+                <a class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">
+                  Services
+                  <img src="./assets/dropdown.svg" alt="" class="pl-2"/>
+                </a>
+                <ul class="absolute top-full left-0 right-0 p-1 rounded-lg bg-dark-100 w-60 hidden lg:group-hover:block">
+                  <li><a href="./landing-page.html" class="flex px-4 py-3 sm:py-4 text-base text-surface-300 hover:text-surface-50 hover:bg-opacity-primary rounded">
+                    <img src="./assets/icon-browsers.svg" alt="" class="mr-2"> 
+                    Landing Page</a>
+                  </li>
+                  <li><a href="./landing-page.html" class="flex px-4 py-3 sm:py-4 text-base text-surface-300 hover:text-surface-50 hover:bg-opacity-primary rounded">
+                    <img src="./assets/icon-desktop.svg" alt="" class="mr-2"> 
+                    Website Redesign</a>
+                  </li>
                 </ul>
-            </nav>
+              </li>
+              <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 💻 Landing Page</a></li>
+              <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 🎨 Website Redesign</a></li>
+              <li><a href="index.html#resources" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Resources</a></li>
+              <li><a href="index.html#about-me" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">About me</a></li>
+              <li><a href="index.html#recommendations" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recommendations</a></li>
+              <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0 lg:pl-6">
+                <a href="index.html#contact" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contact</a>
+              </div>
+            </ul>
+          </nav>
         </div>
-    </header>
+      </header>
     <section class="custom-bg h-screen flex items-center justify-center px-4 sm:px-8 lg:px-10">
         <article class="flex flex-col gap-10 sm:gap-12 lg:max-w-3xl 2xl:max-w-4xl">
             <div class=" flex flex-col gap-4 lg:flex-row lg:gap-16 lg:items-start">
-                <div data-aos="fade-up" data-aos-anchor-placement="top-center" class="flex flex-col gap-12 xl:gap-16">
+                <div class="flex flex-col gap-12 xl:gap-16 fade-up">
                     <div class="header-hero flex flex-col items-center gap-6 lg:gap-6 xl:gap-8">
                         <h1 class=" text-3xl leading-normal text-center text-surface-100 sm:leading-snug sm:text-5xl 2xl:text-6xl 2xl:leading-snug">I create <strong class="text-primary-100">scalable products</strong> and services with a <strong class="text-primary-100"> holistic approach</strong></h1>
                         <p class="text-lg text-center text-surface-300 leading-normal sm:leading-normal md:leading-normal lg:leading-normal sm:text-2xl lg:text-3xl 2xl:text-4xl 2xl:leading-normal">With a focus on collaboration with developers and stakeholders to ensure our designs meet user needs</p>
@@ -261,7 +251,7 @@
         </header>
         <div class="grid max-w-screen-xl gap-16 lg:grid-cols-2">
             
-            <article data-aos="fade-right" class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
                 <div>
                     <img loading="lazy" src="./assets/img-p-space.png" class="motion-translate-x-in-25 motion-opacity-in-0  block rounded-lg border border-surface-900" alt="portada On Energy">
                 </div>
@@ -277,7 +267,7 @@
                 </div>
             </article>
             
-            <article data-aos="fade-left" class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
                 <div>
                     <img loading="lazy" src="./assets/img-p-onenergy.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
                 </div>
@@ -292,7 +282,7 @@
                     </div>
                 </div>
             </article>
-            <article data-aos="fade-right" class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
                 <div>
                     <img loading="lazy" src="./assets/img-p-adidas.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
                 </div>
@@ -311,7 +301,7 @@
                     </div>
                 </div>
             </article>
-            <article data-aos="fade-left" class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
                 <div>
                     <img loading="lazy" src="./assets/img-p-bcp.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
                 </div>
@@ -380,7 +370,7 @@
         <section id="figma" class="flex flex-col gap-6 sm:gap-8">
             <h3 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Downloadable for your projects</h3>
             <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
-                <article data-aos="zoom-in" class="flex flex-col gap-6">
+                <article class="flex flex-col gap-6">
                     <img src="./assets/img-color-palette.png" alt="" class="rounded-lg border border-surface-800">
                     <div class="flex flex-col gap-3">
                         <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Color Palette</h3>
@@ -396,7 +386,7 @@
                         </a>
                     </div>
                 </article>
-                <article data-aos="zoom-in" class="flex flex-col gap-6">
+                <article class="flex flex-col gap-6">
                     <img src="./assets/img-guide 1.png" alt="" class="rounded-lg border border-surface-800">
                     <div class="flex flex-col gap-3">
                         <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">The perfect Font</h3>
@@ -412,7 +402,7 @@
                         </a>
                     </div>
                 </article>
-                <article data-aos="zoom-in" class="flex flex-col gap-6">
+                <article class="flex flex-col gap-6">
                     <img src="./assets/img-space-ds.png" alt="" class="rounded-lg border border-surface-800">
                     <div class="flex flex-col gap-3">
                         <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Space Design System</h3>
@@ -433,7 +423,7 @@
         <section id="templates" class="flex flex-col gap-6 sm:gap-8">
             <h3 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Templates</h3>
             <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
-                <article data-aos="zoom-in" class="flex flex-col gap-6">
+                <article class="flex flex-col gap-6">
                     <img src="./assets/img-template-1.jpg" alt="" class="rounded-lg border border-surface-800">
                     <div class="flex flex-col gap-3">
                         <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Travel booking website</h3>
@@ -447,7 +437,7 @@
                         </a>
                     </div>
                 </article>
-                <article data-aos="zoom-in" class="flex flex-col gap-6">
+                <article class="flex flex-col gap-6">
                     <img src="./assets/img-template-2.jpg" alt="" class="rounded-lg border border-surface-800">
                     <div class="flex flex-col gap-3">
                         <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Landing Pet Adoption</h3>
@@ -461,7 +451,7 @@
                         </a>
                     </div>
                 </article>
-                <article data-aos="zoom-in" class="flex flex-col gap-6">
+                <article class="flex flex-col gap-6">
                     <img src="./assets/img-template-3.jpg" alt="" class="rounded-lg border border-surface-800">
                     <div class="flex flex-col gap-3">
                         <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Web Ecommerce free</h3>
@@ -495,16 +485,16 @@
             <h2 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Soft-Skills</h2>
             <div class="flex flex-col gap-6 lg:flex-row">
                 <div class="flex flex-col gap-6 ">
-                    <article data-aos="fade-up" data-aos-anchor-placement="center-center" class="skill-card flex flex-col gap-4 p-4 border-surface-800 border rounded-lg sm:p-8 lg:p-12">
+                    <article class="skill-card flex flex-col gap-4 p-4 border-surface-800 border rounded-lg sm:p-8 lg:p-12">
                         <p class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal font-bold">Research capacity 📊</p> 
                         <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I conduct usability studies and analyze user data to inform my design decisions, identifying friction points and creating solutions that improve the user experience.</p> 
                     </article>
-                    <article data-aos="fade-up" data-aos-anchor-placement="center-center" class="skill-card flex flex-col gap-4 p-4 border-surface-800 border rounded-lg sm:p-8 lg:p-12">
+                    <article class="skill-card flex flex-col gap-4 p-4 border-surface-800 border rounded-lg sm:p-8 lg:p-12">
                         <p class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal font-bold">Strategic design 🎯</p> 
                         <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I think beyond aesthetics, creating Design Systems that improve visual consistency and impact ROI.</p> 
                     </article>
                 </div>
-                <article data-aos="fade-up" data-aos-anchor-placement="center-center" class="skill-card flex flex-col gap-4 p-4 border-surface-800 border rounded-lg sm:p-8 lg:p-12">
+                <article class="skill-card flex flex-col gap-4 p-4 border-surface-800 border rounded-lg sm:p-8 lg:p-12">
                     <p class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal font-bold">Adaptability 🧩 </p> 
                     <p class="text-surface-300 text-base sm:text-lg lg:text-2xl lg:leading-normal">I have worked in various sectors, adjusting to different work cultures and design methodologies, always with a focus on accessibility and usability.</p> 
                 </article>
@@ -754,9 +744,5 @@
         <small class="text-base text-surface-300 text-center mt-12">© 2025 All rights reserved</small>
     </footer>
     <script src="./js/app.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
 </body>
 </html>

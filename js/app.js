@@ -1,14 +1,12 @@
 let nav = document.querySelector(".nav");
 let iconmenu = document.querySelector("#icon-menu");
 
-
 function openNav() {
-  
-  if (nav.style.display === "block") {
-    nav.style.display = "none";
-    iconmenu.src="./assets/menu.svg";
+  if (nav.classList.contains("hidden")) {
+    nav.classList.remove("hidden");
+    iconmenu.src = "./assets/close.svg";
   } else {
-    nav.style.display = "block";
-    iconmenu.src="./assets/close.svg";
+    nav.classList.add("hidden");
+    iconmenu.src = "./assets/menu.svg";
   }
 }
