@@ -30,6 +30,11 @@
         body::-webkit-scrollbar {
             width: 12px;               
         }
+        .custom-bg {
+            background-image: url("./assets/bg-dots.png");
+            background-size: cover;
+            background-position: center;
+        }
 
         body::-webkit-scrollbar-track {
             background: #1A1A1A;       
@@ -40,9 +45,26 @@
             border-radius: 20px;       
             border: 3px solid #1A1A1A;  
         }
-        #projects, #resources, #about-me, #recommendations, #contact {
+        #projects, #resources, #recommendations, #contact {
             scroll-margin-top: 140px;
         }
+        
+        /* .custom-bg::before {
+           
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -10;
+            width: 100%;
+            height: 100vh;
+            background-image: url(./assets/img-hero-website.jpg);
+            background-color: #0B0B0E;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right;
+            opacity: .5;
+        } */
 
         .bg-recomendation {
             background: radial-gradient(circle at 0% 0%, hsla(130, 100%, 95%, 0.08), hsl(228, 8%, 5%));
@@ -108,7 +130,7 @@
                 background: linear-gradient(-270deg, rgba(11, 11, 14, 0.00) 0%, #0B0B0E 100%);
             }
         }
-        @media screen and (min-width: 1280px) {
+        /* @media screen and (min-width: 1280px) {
             .header-hero,
             .footer-hero {
                 position: relative;
@@ -150,7 +172,7 @@
                 top: -15px;
                 background-image: url(./assets/tool-4.png);
             }
-        }
+        } */
         @media screen and (min-width: 1536px) {
             .header-hero::before {
                 left: -15%;
@@ -197,7 +219,7 @@
           </div>
           <nav id="myLinks" class="bg-opacity-modal nav absolute w-5/6 top-full right-0 pb-8 bg-header px-4 h-svh hidden lg:h-auto lg:bg-transparent lg:static lg:p-0 lg:flex lg:justify-end">
             <ul class="flex flex-col lg:flex-row lg:items-center lg:gap-4">
-              <li><a href="index.html#projects" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Projects</a></li>
+              <li><a href="index.html#about" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">About me</a></li>
               <li class="hidden relative group">
                 <a class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">
                   Services
@@ -214,10 +236,10 @@
                   </li>
                 </ul>
               </li>
+              <li><a href="index.html#projects" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Projects</a></li>
               <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 💻 Landing Page</a></li>
               <li class="hidden"><a href="./resources.html" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">• 🎨 Website Redesign</a></li>
-              <li><a href="index.html#resources" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Resources</a></li>
-              <li><a href="index.html#about-me" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">About me</a></li>
+              <!-- <li><a href="index.html#resources" class="flex px-4 py-3 mb-2 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Resources</a></li> -->
               <li><a href="index.html#recommendations" class="flex px-4 py-3 sm:py-4 text-lg text-surface-300 hover:text-surface-50 lg:p-3 lg:mb-0">Recommendations</a></li>
               <div class="flex gap-4 px-4 mt-6 lg:mt-0 lg:px-0 lg:pl-6">
                 <a href="index.html#contact" class="inline-flex justify-center gap-2 items-center w-full bg-dark-50 border-2 border-surface-300 px-6 py-3 text-base font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 transition duration-300 sm:w-auto"><span class="animate-pulse bg-success-100 w-3 h-3 rounded-full"></span> Contact</a>
@@ -225,252 +247,27 @@
             </ul>
           </nav>
         </div>
-      </header>
+    </header>
     <section class="custom-bg h-screen flex items-center justify-center px-4 sm:px-8 lg:px-10">
         <article class="flex flex-col gap-10 sm:gap-12 lg:max-w-3xl 2xl:max-w-4xl">
             <div class=" flex flex-col gap-4 lg:flex-row lg:gap-16 lg:items-start">
                 <div class="flex flex-col gap-12 xl:gap-16 fade-up">
                     <div class="header-hero flex flex-col items-center gap-6 lg:gap-6 xl:gap-8">
                         <h1 class=" text-3xl leading-normal text-center text-surface-100 sm:leading-snug sm:text-5xl 2xl:text-6xl 2xl:leading-snug">I create <strong class="text-primary-100">scalable products</strong> and services with a <strong class="text-primary-100"> holistic approach</strong></h1>
-                        <p class="text-lg text-center text-surface-300 leading-normal sm:leading-normal md:leading-normal lg:leading-normal sm:text-2xl lg:text-3xl 2xl:text-4xl 2xl:leading-normal">With a focus on collaboration with developers and stakeholders to ensure our designs meet user needs</p>
+                        <p class="text-lg text-center text-surface-300 leading-normal sm:leading-normal md:leading-normal lg:leading-normal sm:text-2xl lg:text-3xl 2xl:text-4xl 2xl:leading-normal">Problem-solving isn't just part of my process—it's my priority.</p>
                     </div>
                     <div class="footer-hero flex justify-center">
-                        <a href="#projects" class="flex gap-4">
+                        <a href="#about" class="flex gap-4">
                             <img class="animate-bounce p-2 border-2 text-surface-300 rounded-full w-12 2xl:w-16" src="./assets/arrow-down.svg" alt="icono de scroll de desplazamiento vertical">
-                            <p class="text-lg text-surface-300 sm:text-2xl">See projects</p>
+                            <p class="text-lg text-surface-300 sm:text-2xl">Why work with me?</p>
                         </a>
                     </div>
                 </div>
             </div>
         </article>
     </section>
-    <section id="projects" class="flex flex-col items-center gap-16 lg:gap-24 px-4 mb-24 sm:px-8 xl:mb-40">
-        <header class="flex flex-col gap-4 max-w-3xl xl:gap-6">
-            <h2 class="text-2xl text-surface-100 text-center mb-0 sm:text-4xl xl:text-5xl">Projects</h2>
-            <p class="text-base text-surface-300 text-center sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Take a look at my Projects</p>
-        </header>
-        <div class="grid max-w-screen-xl gap-16 lg:grid-cols-2">
-            
-            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
-                <div>
-                    <img loading="lazy" src="./assets/img-p-space.png" class="motion-translate-x-in-25 motion-opacity-in-0  block rounded-lg border border-surface-900" alt="portada On Energy">
-                </div>
-                <div class="flex flex-col gap-6 sm:gap-8">
-                    <div class="flex flex-col gap-3">
-                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Project</p>
-                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">Space Design System</h3>
-                    </div>
-                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">I share my adventure of failure and learning in building this project from scratch and seeing how it is achieving relative success.</p>
-                    <div class="flex gap-4">
-                        <a href="./project-space-ds.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">View Project <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
-                    </div>
-                </div>
-            </article>
-            
-            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
-                <div>
-                    <img loading="lazy" src="./assets/img-p-onenergy.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
-                </div>
-                <div class="flex flex-col gap-6 sm:gap-8">
-                    <div class="flex flex-col gap-3">
-                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Project</p>
-                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">On Energy Website Redesign</h3>
-                    </div>
-                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">My focus on the On Energy project was to enhance the brand identity through the optimization of their website.</p>
-                    <div class="flex gap-4">
-                        <a href="./project-on-energy.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">View Project <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
-                    </div>
-                </div>
-            </article>
-            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
-                <div>
-                    <img loading="lazy" src="./assets/img-p-adidas.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
-                </div>
-                <div class="flex w-full flex-col gap-6 sm:gap-8">
-                    <div class="flex flex-col gap-3">
-                        <p class="text-sm text-surface-300 sm:text-lg">🚧 | Work in progress</p>
-                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">Adidas | Case Study</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-4">
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Design Thinking</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">UX Research</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Information Architecture</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Style Guide</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Usability Testing</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Advanced Prototyping</p>
-                    </div>
-                </div>
-            </article>
-            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
-                <div>
-                    <img loading="lazy" src="./assets/img-p-bcp.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
-                </div>
-                <div class="flex w-full flex-col gap-6 sm:gap-8">
-                    <div class="flex flex-col gap-3">
-                        <p class="text-sm text-surface-300 sm:text-lg">🚧 | Work in progress</p>
-                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">BCP | Accessibility Analysis</h3>
-                    </div>
-                    <div class="flex flex-wrap gap-4">
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Color Constrast</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Responsive Layout</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Shortcuts</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">WCAG Standars</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Focus Indicators</p>
-                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Accessible Navigation</p>
-                    </div>
-                    
-                </div>
-            </article>
-        </div>
-    </section>
-    <section class="flex flex-col gap-6 sm:gap-8 lg:gap-16 overflow-hidden mb-16 xl:mb-40 max-w-screen-xl mx-auto">
-        <div class="wrap-tools relative flex overflow-hidden">
-            <div class="flex row-tools shrink-0">
-                <img src="./assets/img-design-01.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-02.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-03.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-04.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-05.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-06.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-07.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-            </div>
-            <div class="flex row-tools shrink-0">
-                <img src="./assets/img-design-01.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-02.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-03.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-04.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-05.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-06.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-                <img src="./assets/img-design-07.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
-            </div>
-        </div>
-        <div class="flex flex-col gap-11">
-            <div class="flex flex-col gap-6">
-                <p class="text-base text-center text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">If you want to see all my projects, <br/>
-                    please contact me.</p>
-            </div>
-            <div class="flex justify-center gap-6">
-                <a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank">
-                    <i class="fa-brands fa-linkedin text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
-                </a>
-                <a href="https://www.instagram.com/josefloresdesign" target="_blank">
-                    <i class="fa-brands fa-instagram text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
-                </a>
-                <a href="mailto:joseflores.design@gmail.com" target="_blank">
-                    <i class="fa-solid fa-envelope text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-    <section id="resources" class="flex flex-col items-center gap-16 lg:gap-24 mb-16 lg:mb-24 px-4 sm:px-8 xl:mb-40 max-w-screen-xl mx-auto">
-        <header class="flex flex-col gap-4 max-w-3xl xl:gap-6">
-            <h2 class="text-2xl text-surface-100 text-center mb-0 sm:text-4xl xl:text-5xl">Resources</h2>
-            <p class="text-base text-surface-300 text-center sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Resources for UX/UI Designers and Developers</p>
-        </header>
-        <section id="figma" class="flex flex-col gap-6 sm:gap-8">
-            <h3 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Downloadable for your projects</h3>
-            <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
-                <article class="flex flex-col gap-6">
-                    <img src="./assets/img-color-palette.png" alt="" class="rounded-lg border border-surface-800">
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Color Palette</h3>
-                        <p class="text-surface-300 text-base sm:text-lg">A color system that has name-conventions, accessibility levels</p>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
-                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 25 +</p>
-                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 609 +</p>
-                        </div>
-                        <a href="https://www.figma.com/community/file/1338986260032944916/color-palette-for-design-systems" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
-                            <img src="./assets/icon-download.svg" alt="">
-                        </a>
-                    </div>
-                </article>
-                <article class="flex flex-col gap-6">
-                    <img src="./assets/img-guide 1.png" alt="" class="rounded-lg border border-surface-800">
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">The perfect Font</h3>
-                        <p class="text-surface-300 text-base sm:text-lg">This is a guide that will allow you to choose the best font for your brand.</p>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
-                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 2 +</p>
-                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 26 +</p>
-                        </div>
-                        <a href="https://www.figma.com/community/file/1382456210694693234/guide-to-choosing-a-font-for-your-brand" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
-                            <img src="./assets/icon-download.svg" alt="">
-                        </a>
-                    </div>
-                </article>
-                <article class="flex flex-col gap-6">
-                    <img src="./assets/img-space-ds.png" alt="" class="rounded-lg border border-surface-800">
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Space Design System</h3>
-                        <p class="text-surface-300 text-base sm:text-lg">Space is a DS created to share resources and build community.</p>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
-                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 482 +</p>
-                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 9.6 k +</p>
-                        </div>
-                        <a href="https://www.figma.com/community/file/1335673212969292007/space-ds" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
-                            <img src="./assets/icon-download.svg" alt="">
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section id="templates" class="flex flex-col gap-6 sm:gap-8">
-            <h3 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Templates</h3>
-            <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
-                <article class="flex flex-col gap-6">
-                    <img src="./assets/img-template-1.jpg" alt="" class="rounded-lg border border-surface-800">
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Travel booking website</h3>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
-                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Investment: $ 0</p>
-                        </div>
-                        <a href="https://josefdesign.gumroad.com/l/template-travel-booking" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
-                            <img src="./assets/icon-download.svg" alt="">
-                        </a>
-                    </div>
-                </article>
-                <article class="flex flex-col gap-6">
-                    <img src="./assets/img-template-2.jpg" alt="" class="rounded-lg border border-surface-800">
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Landing Pet Adoption</h3>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
-                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Investment: $ 0</p>
-                        </div>
-                        <a href="https://josefdesign.gumroad.com/l/template-landing-adoption" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
-                            <img src="./assets/icon-download.svg" alt="">
-                        </a>
-                    </div>
-                </article>
-                <article class="flex flex-col gap-6">
-                    <img src="./assets/img-template-3.jpg" alt="" class="rounded-lg border border-surface-800">
-                    <div class="flex flex-col gap-3">
-                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Web Ecommerce free</h3>
-                    </div>
-                    <div class="flex justify-between">
-                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
-                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Investment: $ 0</p>
-                        </div>
-                        <a href="https://josefdesign.gumroad.com/l/template-ecommerce" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
-                            <img src="./assets/icon-download.svg" alt="">
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </section>
-        
-    </section>
-    <section id="about-me" class="overflow-hidden flex flex-col gap-16 lg:gap-24 px-4 sm:px-8 mb-16 lg:mb-24 xl:mb-40 max-w-screen-xl mx-auto">
-        <section id="about" class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
+    <section id="about" class="pt-32 overflow-hidden flex flex-col gap-16 lg:gap-24 px-4 sm:px-8 mb-16 lg:mb-24 xl:mb-40 max-w-screen-xl mx-auto">
+        <section class="flex flex-col gap-6 sm:gap-8 lg:gap-10">
             <h2 class="text-2xl text-surface-100 mb-0 sm:text-4xl xl:text-5xl">About me</h2>
             <div class="md:flex md:gap-8 xl:gap-20">
                 <img src="./assets/image profile.webp" alt="profile image" class="self-start rounded-lg sm:max-w-80 2xl:max-w-96">
@@ -592,7 +389,124 @@
             </div>
         </section>
     </section>
-    
+    <section id="projects" class="flex flex-col items-center gap-16 lg:gap-24 px-4 mb-24 sm:px-8 xl:mb-40">
+        <header class="flex flex-col gap-4 max-w-3xl xl:gap-6">
+            <h2 class="text-2xl text-surface-100 text-center mb-0 sm:text-4xl xl:text-5xl">Projects</h2>
+            <p class="text-base text-surface-300 text-center sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Take a look at my Projects</p>
+        </header>
+        <div class="grid max-w-screen-xl gap-16 lg:grid-cols-2">
+            
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-space.png" class="motion-translate-x-in-25 motion-opacity-in-0  block rounded-lg border border-surface-900" alt="portada On Energy">
+                </div>
+                <div class="flex flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Project</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">Space Design System</h3>
+                    </div>
+                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">I share my adventure of failure and learning in building this project from scratch and seeing how it is achieving relative success.</p>
+                    <div class="flex gap-4">
+                        <a href="./project-space-ds.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">View Project <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-onenergy.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
+                </div>
+                <div class="flex flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">💼 | Project</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">On Energy Website Redesign</h3>
+                    </div>
+                    <p class="text-base text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">My focus on the On Energy project was to enhance the brand identity through the optimization of their website.</p>
+                    <div class="flex gap-4">
+                        <a href="./project-on-energy.html" class="flex items-center gap-4 justify-center w-full bg-dark-50 border-2 border-surface-100 px-8 py-4 text-lg font-bold text-surface-50 rounded-full hover:bg-surface-100 hover:text-surface-900 hover:pr-16 group transition-all duration-300 sm:w-auto relative">View Project <span class="fa-solid fa-arrow-right opacity-0 absolute right-8 top-5 transition-all duration-300 group-hover:opacity-100"></span></a>
+                    </div>
+                </div>
+            </article>
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-adidas.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
+                </div>
+                <div class="flex w-full flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">🚧 | Work in progress</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">Adidas | Case Study</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Design Thinking</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">UX Research</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Information Architecture</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Style Guide</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Usability Testing</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Advanced Prototyping</p>
+                    </div>
+                </div>
+            </article>
+            <article class="flex flex-col gap-6 lg:items-center lg:max-w-screen-xl">
+                <div>
+                    <img loading="lazy" src="./assets/img-p-bcp.png" class="block rounded-lg border border-surface-900" alt="portada Tedx Lima">
+                </div>
+                <div class="flex w-full flex-col gap-6 sm:gap-8">
+                    <div class="flex flex-col gap-3">
+                        <p class="text-sm text-surface-300 sm:text-lg">🚧 | Work in progress</p>
+                        <h3 class="text-2xl text-surface-100 sm:text-3xl xl:text-3xl">BCP | Accessibility Analysis</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Color Constrast</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Responsive Layout</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Shortcuts</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">WCAG Standars</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Focus Indicators</p>
+                        <p class="text-sm py-1 px-3 border border-surface-100 text-surface-100 rounded-full">Accessible Navigation</p>
+                    </div>
+                    
+                </div>
+            </article>
+        </div>
+    </section>
+    <section class="flex flex-col gap-6 sm:gap-8 lg:gap-16 overflow-hidden mb-16 xl:mb-40 max-w-screen-xl mx-auto">
+        <div class="wrap-tools relative flex overflow-hidden">
+            <div class="flex row-tools shrink-0">
+                <img src="./assets/img-design-01.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-02.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-03.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-04.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-05.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-06.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-07.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+            </div>
+            <div class="flex row-tools shrink-0">
+                <img src="./assets/img-design-01.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-02.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-03.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-04.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-05.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-06.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+                <img src="./assets/img-design-07.jpg" class="w-48 rounded-lg mr-4 lg:w-96 lg:mr-6" alt="">
+            </div>
+        </div>
+        <div class="flex flex-col gap-11">
+            <div class="flex flex-col gap-6">
+                <p class="text-base text-center text-surface-300 sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">If you want to see all my projects, <br/>
+                    please contact me.</p>
+            </div>
+            <div class="flex justify-center gap-6">
+                <a href="https://www.linkedin.com/in/josefloresdesign/" target="_blank">
+                    <i class="fa-brands fa-linkedin text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+                <a href="https://www.instagram.com/josefloresdesign" target="_blank">
+                    <i class="fa-brands fa-instagram text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+                <a href="mailto:joseflores.design@gmail.com" target="_blank">
+                    <i class="fa-solid fa-envelope text-surface-300 text-4xl xl:text-5xl hover:animate-pulse hover:scale-110 hover:text-surface-50 transition-all duration-300"></i>
+                </a>
+            </div>
+        </div>
+    </section>
     <section id="recommendations" class="pt-24 px-4 flex flex-col items-center gap-8 mb-24 sm:px-8 lg:gap-16 xl:mb-40 2xl:mb-52">
         <header class="flex flex-col gap-4 max-w-3xl xl:gap-6">
             <h2 class="text-2xl text-surface-100 text-center mb-0 sm:text-4xl xl:text-5xl">Recommendations</h2>
@@ -688,6 +602,118 @@
         </div>
             
     </section>
+    
+    
+    <!-- <section id="resources" class="flex flex-col items-center gap-16 lg:gap-24 mb-16 lg:mb-24 px-4 sm:px-8 xl:mb-40 max-w-screen-xl mx-auto">
+        <header class="flex flex-col gap-4 max-w-3xl xl:gap-6">
+            <h2 class="text-2xl text-surface-100 text-center mb-0 sm:text-4xl xl:text-5xl">Resources</h2>
+            <p class="text-base text-surface-300 text-center sm:text-2xl sm:leading-normal xl:text-2xl xl:leading-normal">Resources for UX/UI Designers and Developers</p>
+        </header>
+        <section id="figma" class="flex flex-col gap-6 sm:gap-8">
+            <h3 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Downloadable for your projects</h3>
+            <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-color-palette.png" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Color Palette</h3>
+                        <p class="text-surface-300 text-base sm:text-lg">A color system that has name-conventions, accessibility levels</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 25 +</p>
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 609 +</p>
+                        </div>
+                        <a href="https://www.figma.com/community/file/1338986260032944916/color-palette-for-design-systems" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
+                    </div>
+                </article>
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-guide 1.png" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">The perfect Font</h3>
+                        <p class="text-surface-300 text-base sm:text-lg">This is a guide that will allow you to choose the best font for your brand.</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 2 +</p>
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 26 +</p>
+                        </div>
+                        <a href="https://www.figma.com/community/file/1382456210694693234/guide-to-choosing-a-font-for-your-brand" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
+                    </div>
+                </article>
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-space-ds.png" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Space Design System</h3>
+                        <p class="text-surface-300 text-base sm:text-lg">Space is a DS created to share resources and build community.</p>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-star.svg" alt=""> 482 +</p>
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/icon-people.svg" alt=""> 9.6 k +</p>
+                        </div>
+                        <a href="https://www.figma.com/community/file/1335673212969292007/space-ds" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="templates" class="flex flex-col gap-6 sm:gap-8">
+            <h3 class="text-surface-100 text-2xl sm:text-3xl lg:text-4xl">Templates</h3>
+            <div class="grid grid-cols-1 gap-12 md:gap-6 md:grid-cols-2 xl:grid-cols-3">
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-template-1.jpg" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Travel booking website</h3>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Investment: $ 0</p>
+                        </div>
+                        <a href="https://josefdesign.gumroad.com/l/template-travel-booking" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
+                    </div>
+                </article>
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-template-2.jpg" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Landing Pet Adoption</h3>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Investment: $ 0</p>
+                        </div>
+                        <a href="https://josefdesign.gumroad.com/l/template-landing-adoption" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
+                    </div>
+                </article>
+                <article class="flex flex-col gap-6">
+                    <img src="./assets/img-template-3.jpg" alt="" class="rounded-lg border border-surface-800">
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-surface-100 text-base sm:text-lg lg:text-2xl lg:leading-normal">Web Ecommerce free</h3>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="flex gap-6 px-4 border border-surface-700 rounded-lg">
+                            <p class="text-surface-300 text-base sm:text-lg flex items-center gap-2"><img src="./assets/wallet.svg" alt="">Investment: $ 0</p>
+                        </div>
+                        <a href="https://josefdesign.gumroad.com/l/template-ecommerce" target="_blank" class="bg-primary-200 p-2.5 block rounded-lg hover:bg-primary-300 transition-all duration-300">
+                            <img src="./assets/icon-download.svg" alt="">
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+    </section> -->
+   
+    
+    
     <section id="contact" class="px-4 flex justify-center items-center mb-24 sm:gap-8 sm:px-8 xl:mb-40 2xl:mb-52">
         <article class="flex w-full flex-col gap-4 lg:flex-row lg:gap-16 lg:items-center lg:max-w-screen-lg lg:px-8 xl:px-0">
             <img src="./assets/img-chat-3d.png" loading="lazy" alt="Imagen 3d de burbuja de chat" class="w-40 lg:w-80">
@@ -725,9 +751,10 @@
                 <div class="flex flex-col gap-4">
                     <h4 class="text-lg font-bold text-surface-300">Pages</h4>
                     <ul class="flex flex-col gap-2">
-                        <li><a href="#projects" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Projects</a></li>
-                        <li><a href="#resources" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Resources</a></li>
                         <li><a href="#about-me" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">About me</a></li>
+                        <li><a href="#projects" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Projects</a></li>
+                        <!-- <li><a href="#resources" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Resources</a></li> -->
+                        <li><a href="#recommendations" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Recommendations</a></li>
                         <li><a href="#contact" class="flex text-base sm:text-lg sm:leading-normal text-surface-300 hover:text-surface-50">Contact</a></li>
                     </ul>
                 </div>
